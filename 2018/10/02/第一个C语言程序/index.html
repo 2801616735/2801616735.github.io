@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>第一个C语言程序 | Iamasb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、第一个C语言程序1、运行环境说明win10、mingw32">
+<meta name="keywords" content="C语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一个C语言程序">
+<meta property="og:url" content="http://www.iamasb.com/2018/10/02/第一个C语言程序/index.html">
+<meta property="og:site_name" content="Iamasb">
+<meta property="og:description" content="一、第一个C语言程序1、运行环境说明win10、mingw32">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.iamasb.com/img/2/1.png">
+<meta property="og:image" content="http://www.iamasb.com/img/2/2.png">
+<meta property="og:image" content="http://www.iamasb.com/img/2/3.png">
+<meta property="og:updated_time" content="2018-10-14T15:09:40.984Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第一个C语言程序">
+<meta name="twitter:description" content="一、第一个C语言程序1、运行环境说明win10、mingw32">
+<meta name="twitter:image" content="http://www.iamasb.com/img/2/1.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Iamasb</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">你把时间花在什么样的地方,决定了你成为什么样的人.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <!--<nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.iamasb.com"></form>
+      </div>-->
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-第一个C语言程序" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/02/第一个C语言程序/" class="article-date">
+  <time datetime="2018-10-02T14:56:24.000Z" itemprop="datePublished">2018-10-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      第一个C语言程序
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一、第一个C语言程序"><a href="#一、第一个C语言程序" class="headerlink" title="一、第一个C语言程序"></a>一、第一个C语言程序</h4><h5 id="1、运行环境说明"><a href="#1、运行环境说明" class="headerlink" title="1、运行环境说明"></a>1、运行环境说明</h5><p>win10、mingw32<a id="more"></a></p>
+<h5 id="2、源代码"><a href="#2、源代码" class="headerlink" title="2、源代码"></a>2、源代码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 包含内置类库</span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">// int  为整形类型，意在强调返回类型为整形</span><br><span class="line">// main 为入口函数</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	// printf为打印函数，本程序打印 &quot;hello world&quot;</span><br><span class="line">	printf(&quot;hello world.&quot;);	</span><br><span class="line">	// return为返回操作</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>备注: 把文件保存为hello.c，并保存在本地电脑目录d:/C/cstudy中</p>
+</blockquote>
+<h5 id="3、运行源代码"><a href="#3、运行源代码" class="headerlink" title="3、运行源代码"></a>3、运行源代码</h5><h6 id="3-1、打开mingw32"><a href="#3-1、打开mingw32" class="headerlink" title="3.1、打开mingw32"></a>3.1、打开mingw32</h6><ul>
+<li>进入d:/C/cstudy中</li>
+<li>使用命令gcc，进行如下操作<br><img src="/img/2/1.png" alt="gcc操作"></li>
+<li>运行程序<br><img src="/img/2/2.png" alt="运行结果"></li>
+</ul>
+<h5 id="4、总结"><a href="#4、总结" class="headerlink" title="4、总结"></a>4、总结</h5><h6 id="4-1、整个过程运行总结"><a href="#4-1、整个过程运行总结" class="headerlink" title="4.1、整个过程运行总结"></a>4.1、整个过程运行总结</h6><p><img src="/img/2/3.png" alt="总结"></p>
+<blockquote>
+<p>备注: 从运行图可以知道，如果源代码发生修改，则只能重新编译链接才行运行</p>
+</blockquote>
+<h6 id="4-2、常见文件格式总结"><a href="#4-2、常见文件格式总结" class="headerlink" title="4.2、常见文件格式总结"></a>4.2、常见文件格式总结</h6><ul>
+<li>.c格式的文件为C源代码程序文件</li>
+<li>.o为编译后的文件</li>
+<li>.exe或.out则是链接后的文件</li>
+</ul>
+<h6 id="4-3、gcc命令总结"><a href="#4-3、gcc命令总结" class="headerlink" title="4.3、gcc命令总结"></a>4.3、gcc命令总结</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gcc -c 文件名.c 编译操作</span><br><span class="line">gcc -o 文件名.o 链接操作</span><br><span class="line">./a.exe  运行程序</span><br><span class="line">gcc 文件名.c 直接编译、链接</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.iamasb.com/2018/10/02/第一个C语言程序/" data-id="cjn9095sj0005owh6epv8ugze" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/10/03/程序常见错误/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          程序常见错误
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/02/C语言简介/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">C语言简介</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/03/程序常见错误/">程序常见错误</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/02/第一个C语言程序/">第一个C语言程序</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/02/C语言简介/">C语言简介</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/02/计算机和软件常识/">计算机和软件常识</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/01/Iamasb/">Iamasb</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C语言/">C语言</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人简介/">个人简介</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程常识/">编程常识</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C语言/" style="font-size: 20px;">C语言</a> <a href="/tags/个人简介/" style="font-size: 10px;">个人简介</a> <a href="/tags/编程常识/" style="font-size: 10px;">编程常识</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">关于作者</h3>
+    <div class="widget">
+      <ul>
+      	<li>邮箱:2801616735@qq.com</li>
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 脚本小子
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<!--
+-->
+
+<div style="display:none;">
+<script src="https://s22.cnzz.com/z_stat.php?id=1275045943&web_id=1275045943" language="JavaScript"></script>
+</div>
+
+  </div>
+</body>
+</html>

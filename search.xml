@@ -3,6 +3,57 @@
   
     
     <entry>
+      <title>程序常见错误</title>
+      <link href="/2018/10/03/%E7%A8%8B%E5%BA%8F%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
+      <url>/2018/10/03/%E7%A8%8B%E5%BA%8F%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</url>
+      
+        <content type="html"><![CDATA[<h4 id="一、程序常见错误"><a href="#一、程序常见错误" class="headerlink" title="一、程序常见错误"></a>一、程序常见错误</h4><h5 id="1、文件后缀名"><a href="#1、文件后缀名" class="headerlink" title="1、文件后缀名"></a>1、文件后缀名<a id="more"></a></h5><ul><li>把上一节的hello.c，换成hello.txt</li><li>编译操作<br><img src="/img/3/1.png" alt="编译操作"><blockquote><p>总结:  也就是说，编译器只能编译.c后缀的文件名</p></blockquote></li></ul><h5 id="2、无main函数"><a href="#2、无main函数" class="headerlink" title="2、无main函数"></a>2、无main函数</h5><ul><li>把上一节的hello.c中的main换成其它名称</li><li>编译操作<br><img src="/img/3/2.png" alt="编译操作"><blockquote><p>总结:  编译通过，但无法进行链接</p></blockquote></li></ul><h5 id="3、无包含内置类库"><a href="#3、无包含内置类库" class="headerlink" title="3、无包含内置类库"></a>3、无包含内置类库</h5><ul><li>把上一节的hello.c中的”#include&lt;stdio.h&gt;”去掉</li><li>编译操作<br><img src="/img/3/3.png" alt="编译操作"><blockquote><p>总结:  也就是说，去掉时，则无法识别printf函数</p></blockquote></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>第一个C语言程序</title>
+      <link href="/2018/10/02/%E7%AC%AC%E4%B8%80%E4%B8%AAC%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F/"/>
+      <url>/2018/10/02/%E7%AC%AC%E4%B8%80%E4%B8%AAC%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F/</url>
+      
+        <content type="html"><![CDATA[<h4 id="一、第一个C语言程序"><a href="#一、第一个C语言程序" class="headerlink" title="一、第一个C语言程序"></a>一、第一个C语言程序</h4><h5 id="1、运行环境说明"><a href="#1、运行环境说明" class="headerlink" title="1、运行环境说明"></a>1、运行环境说明</h5><p>win10、mingw32<a id="more"></a></p><h5 id="2、源代码"><a href="#2、源代码" class="headerlink" title="2、源代码"></a>2、源代码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 包含内置类库</span><br><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">// int  为整形类型，意在强调返回类型为整形</span><br><span class="line">// main 为入口函数</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">// printf为打印函数，本程序打印 &quot;hello world&quot;</span><br><span class="line">printf(&quot;hello world.&quot;);</span><br><span class="line">// return为返回操作</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>备注: 把文件保存为hello.c，并保存在本地电脑目录d:/C/cstudy中</p></blockquote><h5 id="3、运行源代码"><a href="#3、运行源代码" class="headerlink" title="3、运行源代码"></a>3、运行源代码</h5><h6 id="3-1、打开mingw32"><a href="#3-1、打开mingw32" class="headerlink" title="3.1、打开mingw32"></a>3.1、打开mingw32</h6><ul><li>进入d:/C/cstudy中</li><li>使用命令gcc，进行如下操作<br><img src="/img/2/1.png" alt="gcc操作"></li><li>运行程序<br><img src="/img/2/2.png" alt="运行结果"></li></ul><h5 id="4、总结"><a href="#4、总结" class="headerlink" title="4、总结"></a>4、总结</h5><h6 id="4-1、整个过程运行总结"><a href="#4-1、整个过程运行总结" class="headerlink" title="4.1、整个过程运行总结"></a>4.1、整个过程运行总结</h6><p><img src="/img/2/3.png" alt="总结"></p><blockquote><p>备注: 从运行图可以知道，如果源代码发生修改，则只能重新编译链接才行运行</p></blockquote><h6 id="4-2、常见文件格式总结"><a href="#4-2、常见文件格式总结" class="headerlink" title="4.2、常见文件格式总结"></a>4.2、常见文件格式总结</h6><ul><li>.c格式的文件为C源代码程序文件</li><li>.o为编译后的文件</li><li>.exe或.out则是链接后的文件</li></ul><h6 id="4-3、gcc命令总结"><a href="#4-3、gcc命令总结" class="headerlink" title="4.3、gcc命令总结"></a>4.3、gcc命令总结</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gcc -c 文件名.c 编译操作</span><br><span class="line">gcc -o 文件名.o 链接操作</span><br><span class="line">./a.exe  运行程序</span><br><span class="line">gcc 文件名.c 直接编译、链接</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>C语言简介</title>
+      <link href="/2018/10/02/C%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B/"/>
+      <url>/2018/10/02/C%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B/</url>
+      
+        <content type="html"><![CDATA[<h4 id="一、C语言简介"><a href="#一、C语言简介" class="headerlink" title="一、C语言简介"></a>一、C语言简介</h4><h5 id="1、学习C语言的原因"><a href="#1、学习C语言的原因" class="headerlink" title="1、学习C语言的原因"></a>1、学习C语言的原因</h5><p>C是所有编程语言中的经典，很多高级语言都是从C语言中衍生出来的，比如C++、C#、Objective-C等<br><a id="more"></a></p><h5 id="2、简史"><a href="#2、简史" class="headerlink" title="2、简史"></a>2、简史</h5><p>C语言于1972年发明，首次使用是用于重写UINX操作系统(UNIX以前主要是用汇编语言写的，它奠定了操作系统的基础)</p><h5 id="3、特点"><a href="#3、特点" class="headerlink" title="3、特点"></a>3、特点</h5><ul><li>丰富的运算符</li><li>丰富的数据类型</li><li>可以直接操作硬件</li><li>高效的目标代码</li><li>可移植性好</li></ul><h5 id="4、主要用途"><a href="#4、主要用途" class="headerlink" title="4、主要用途"></a>4、主要用途</h5><ul><li>编写系统软件、图形处理、单片机程序、嵌入式系统开发</li><li>编写游戏外挂</li><li>衍生其它语言</li></ul><h5 id="5、版本原因"><a href="#5、版本原因" class="headerlink" title="5、版本原因"></a>5、版本原因</h5><ul><li>1983年美国国家标准局(American National Standards Institute，简称ANSI)成立了一个委员会，开始制定C语言标准的工作</li><li>1989年C语言标准被批准，这个版本的C语言标准通常被称为ANSI C</li><li>1999年，国际标准化组织ISO又对C语言标准进行修订，在基本保留原来C语言特征的基础上，针对应该的需要，增加了一些功能，命名为C99</li><li>2011年12月8日，ISO正式公布C语言新的国际标准草案：C11</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>计算机和软件常识</title>
       <link href="/2018/10/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%92%8C%E8%BD%AF%E4%BB%B6%E5%B8%B8%E8%AF%86/"/>
       <url>/2018/10/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%92%8C%E8%BD%AF%E4%BB%B6%E5%B8%B8%E8%AF%86/</url>
@@ -13,7 +64,7 @@
       
         <tags>
             
-            <tag> C语言 </tag>
+            <tag> 编程常识 </tag>
             
         </tags>
       
