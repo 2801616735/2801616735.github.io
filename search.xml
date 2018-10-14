@@ -3,17 +3,34 @@
   
     
     <entry>
-      <title>Iamasb</title>
-      <link href="/2018/10/13/Iamasb/"/>
-      <url>/2018/10/13/Iamasb/</url>
+      <title>计算机和软件常识</title>
+      <link href="/2018/10/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%92%8C%E8%BD%AF%E4%BB%B6%E5%B8%B8%E8%AF%86/"/>
+      <url>/2018/10/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%92%8C%E8%BD%AF%E4%BB%B6%E5%B8%B8%E8%AF%86/</url>
       
-        <content type="html"><![CDATA[<h2 id="Iamasb-gt-我是脚本小子"><a href="#Iamasb-gt-我是脚本小子" class="headerlink" title="Iamasb =&gt; 我是脚本小子"></a>Iamasb =&gt; 我是脚本小子</h2>]]></content>
+        <content type="html"><![CDATA[<h4 id="一、计算机和软件常识"><a href="#一、计算机和软件常识" class="headerlink" title="一、计算机和软件常识"></a>一、计算机和软件常识</h4><h5 id="1、计算机核心硬件"><a href="#1、计算机核心硬件" class="headerlink" title="1、计算机核心硬件"></a>1、计算机核心硬件</h5><ul><li>核心硬件:  硬盘、内存、CPU</li><li>核心硬件运作图<a id="more"></a><br><img src="/img/1/1_01.png" alt="运作图"></li></ul><h5 id="2、计算机识别机制"><a href="#2、计算机识别机制" class="headerlink" title="2、计算机识别机制"></a>2、计算机识别机制</h5><p>计算机能够识别0和1</p><h5 id="3、计算机和软件的联系"><a href="#3、计算机和软件的联系" class="headerlink" title="3、计算机和软件的联系"></a>3、计算机和软件的联系</h5><ul><li>软件的基本概念:  指令的集合</li><li>两者的联系:  可以通过软件来控制计算机</li></ul><h5 id="4、计算机语言"><a href="#4、计算机语言" class="headerlink" title="4、计算机语言"></a>4、计算机语言</h5><ul><li>一门可以与计算机打交道的”语言”</li><li>方便编写指令</li></ul><h4 id="二、计算机语言发展史"><a href="#二、计算机语言发展史" class="headerlink" title="二、计算机语言发展史"></a>二、计算机语言发展史</h4><h5 id="1、顺序图"><a href="#1、顺序图" class="headerlink" title="1、顺序图"></a>1、顺序图</h5><p><img src="/img/1/1_02.png" alt="运作图"></p><h5 id="2、机器语言"><a href="#2、机器语言" class="headerlink" title="2、机器语言"></a>2、机器语言</h5><p>所有代码里面只有0和1，每一条指令称为“机器指令”</p><h6 id="2-1、优点"><a href="#2-1、优点" class="headerlink" title="2.1、优点"></a>2.1、优点</h6><ul><li>代码能被计算机直接识别，直接对硬件产生作用，程序的执行效率非常高</li></ul><h6 id="2-2、缺点"><a href="#2-2、缺点" class="headerlink" title="2.2、缺点"></a>2.2、缺点</h6><ul><li>程序全是些0和1的指令代码，可读性差，还容易出错</li><li>对硬件的依赖性很强，因此不同型号计算机的机器语言又不一样</li><li>要熟记所用计算机的全部指令和指令的涵义，指令又多又难记</li></ul><h6 id="2-3、使用场景"><a href="#2-3、使用场景" class="headerlink" title="2.3、使用场景"></a>2.3、使用场景</h6><p>机器语言很难掌握和推广，现在除了计算机生产厂家的专业人员外，绝大多数的程序员已经不再去学习机器语言</p><h5 id="3、汇编语言"><a href="#3、汇编语言" class="headerlink" title="3、汇编语言"></a>3、汇编语言</h5><p>用英文单词等符号代替机器指令</p><h6 id="3-1、优点"><a href="#3-1、优点" class="headerlink" title="3.1、优点"></a>3.1、优点</h6><ul><li>像机器语言一样，可以直接访问、控制计算机的各种硬件设备，不过指令好理解易懂</li></ul><h6 id="3-2、缺点"><a href="#3-2、缺点" class="headerlink" title="3.2、缺点"></a>3.2、缺点</h6><ul><li>不同的机器有不同的汇编语言语法和编译器，代码缺乏可移植性</li></ul><h6 id="3-3、使用场景"><a href="#3-3、使用场景" class="headerlink" title="3.3、使用场景"></a>3.3、使用场景</h6><ul><li>操作系统内核、驱动程序、单片机程序</li><li>软件的加密、解密、破解</li><li>病毒的制作、防治</li><li>程序的调试、分析</li></ul><h5 id="4、高级语言"><a href="#4、高级语言" class="headerlink" title="4、高级语言"></a>4、高级语言</h5><p>接近自然语言</p><h6 id="4-1、优点"><a href="#4-1、优点" class="headerlink" title="4.1、优点"></a>4.1、优点</h6><ul><li>简单、易用、易于理解，语法和结构类似于普通英文</li><li>远离对硬件的直接操作，使得一般人经过学习之后都可以编程，而不用太熟悉硬件知识</li><li>一个程序还可以在不同的机器上运行，具有可移植性</li></ul><h6 id="4-2、缺点"><a href="#4-2、缺点" class="headerlink" title="4.2、缺点"></a>4.2、缺点</h6><ul><li>程序不能直接被计算机识别，需要经编译器翻译成二进制指令后，才能运行到计算机上</li></ul><h6 id="4-3、分类"><a href="#4-3、分类" class="headerlink" title="4.3、分类"></a>4.3、分类</h6><p>高级语言按照”看问题”的角度，可分为”面向过程”和”面向对象”</p>]]></content>
       
       
       
         <tags>
             
-            <tag> 编程旅途 </tag>
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Iamasb</title>
+      <link href="/2018/10/01/Iamasb/"/>
+      <url>/2018/10/01/Iamasb/</url>
+      
+        <content type="html"><![CDATA[<p>Iamasb 是 I‘m a scripboy(我是脚本小子)的缩写.当然,可以认为自己是个’sb’.^_^<br><a id="more"></a>以前，有人说，脚本小子是网站渗透中来形容一群熟悉工具，但不知道工具背后的运作原理的”菜鸟”.<br>但这个词对我而言，是因为自己从事web开发。本质上是个”拍黄片”的(phper),而php也被人认为是一门脚本语言.因此,也就这么认为自己了.</p><blockquote><p>“你把时间花在什么样的地方,决定了你成为什么样的人.”</p></blockquote><p>喜欢这句话.因此弄了这个站点.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 个人简介 </tag>
             
         </tags>
       
