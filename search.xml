@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title>变量内存分析</title>
+      <link href="/2018/10/04/%E5%8F%98%E9%87%8F%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/"/>
+      <url>/2018/10/04/%E5%8F%98%E9%87%8F%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<h5 id="1、什么是内存"><a href="#1、什么是内存" class="headerlink" title="1、什么是内存"></a>1、什么是内存</h5><p>之前文章有提到，动态数据。动态数据需要存储介质进行存放。这个介质就叫内存。<a id="more"></a></p><h5 id="2、内存存在的目的"><a href="#2、内存存在的目的" class="headerlink" title="2、内存存在的目的"></a>2、内存存在的目的</h5><p>缓冲地带，解决了静态数据(硬盘中)与CPU的交互速度。<br>!(交互)[/img/img/4/1.png]</p><h5 id="3、内存地址"><a href="#3、内存地址" class="headerlink" title="3、内存地址"></a>3、内存地址</h5><p>内存地址是一个编号，代表一个内存空间。而在计算机中存储器的容量是以字节为基本单位的。也就是说一个内存地址代表一个字节（8bit）的存储空间。</p><h5 id="4、理解内存地址"><a href="#4、理解内存地址" class="headerlink" title="4、理解内存地址"></a>4、理解内存地址</h5><h6 id="4-1、测试源代码scanf-c"><a href="#4-1、测试源代码scanf-c" class="headerlink" title="4.1、测试源代码scanf.c"></a>4.1、测试源代码scanf.c</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">// 声明变量a为整形类型</span><br><span class="line">int a;</span><br><span class="line">// 等待输入整形数据，并把值赋给变量a</span><br><span class="line">scanf(&quot;%d&quot;,&amp;a);</span><br><span class="line">// 打印变量a的内容</span><br><span class="line">printf(&quot;%d&quot;,a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h6 id="4-2、运行结果"><a href="#4-2、运行结果" class="headerlink" title="4.2、运行结果"></a>4.2、运行结果</h6><p>!(交互)[/img/img/4/2.png]</p><h6 id="4-3、执行流程"><a href="#4-3、执行流程" class="headerlink" title="4.3、执行流程"></a>4.3、执行流程</h6><p>!(交互)[/img/img/4/3.png]</p><h6 id="4-4、内存分布"><a href="#4-4、内存分布" class="headerlink" title="4.4、内存分布"></a>4.4、内存分布</h6><p>!(交互)[/img/img/4/4.png]</p><h6 id="4-5、描述"><a href="#4-5、描述" class="headerlink" title="4.5、描述"></a>4.5、描述</h6><ul><li>变量等标识符说白了是便于程序员阅读，而计算机是无法识别的。因此最终变量还是得转换为内存地址才能被计算机所运行</li><li>而变量能转换为具体的内存地址，则依靠”符号表”作为映射，才能正常工作</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>常见术语</title>
+      <link href="/2018/10/04/%E5%B8%B8%E8%A7%81%E6%9C%AF%E8%AF%AD/"/>
+      <url>/2018/10/04/%E5%B8%B8%E8%A7%81%E6%9C%AF%E8%AF%AD/</url>
+      
+        <content type="html"><![CDATA[<h4 id="一、关键字"><a href="#一、关键字" class="headerlink" title="一、关键字"></a>一、关键字</h4><p>关键字就是C语言提供的有特殊含义的符号<br>C语言一共提供了32个关键字，这些关键字都被C语言赋予了特殊含义<a id="more"></a><br>auto double int struct break else long switch<br>case enum register typedef char extern return union<br>const float short unsigned continue for signed void<br>default goto sizeof volatile do if while static</p><h5 id="1、关键字特征"><a href="#1、关键字特征" class="headerlink" title="1、关键字特征"></a>1、关键字特征</h5><ul><li>通常都是小写</li><li>在编辑器中一般会有特殊颜色显示</li></ul><h4 id="二、标识符"><a href="#二、标识符" class="headerlink" title="二、标识符"></a>二、标识符</h4><p>标识符就是在程序中自定义的一些符号和名称。要跟关键字区分开来：关键字是C语言默认提供的符号，标识符是程序员自定义的</p><h5 id="1、标识符作用"><a href="#1、标识符作用" class="headerlink" title="1、标识符作用"></a>1、标识符作用</h5><p>  用来标识某些东西的符号，标识的目的就是为了将这些东西区分开来</p><h5 id="2、命名规则"><a href="#2、命名规则" class="headerlink" title="2、命名规则"></a>2、命名规则</h5><ul><li>只能由26个英文字母的大小写、10个阿拉伯数字0~9、下划线_组成</li><li>严格区分大小写，比如test和Test是2个不同的标识符</li><li>不能以数字开头</li><li>不可以使用关键字作为标识符</li></ul><h4 id="三、注释"><a href="#三、注释" class="headerlink" title="三、注释"></a>三、注释</h4><p>注释从字面意思上理解就是注解、解释的意思。是可以用来解释某一段程序或者某一行代码是什么意思，方便程序员之间的交流</p><h5 id="1、单行注释"><a href="#1、单行注释" class="headerlink" title="1、单行注释"></a>1、单行注释</h5><ul><li>单行注释以两个正斜杠开头，也就是以//开头，只能注释一行，从//开始到这行的结尾都是注释的内容</li><li>任何地方都可以写注释：函数外面、里面，每一条语句后面</li></ul><h5 id="2、多行注释"><a href="#2、多行注释" class="headerlink" title="2、多行注释"></a>2、多行注释</h5><p>多行注释以/<em>开头，以</em>/结尾，/<em>和</em>/中间的内容都是注释</p><h4 id="四、数据"><a href="#四、数据" class="headerlink" title="四、数据"></a>四、数据</h4><p>在我们使用计算机的过程中，会接触到各种各样的数据,如文档、图片、视频等等</p><h5 id="1、数据分类"><a href="#1、数据分类" class="headerlink" title="1、数据分类"></a>1、数据分类</h5><h6 id="1-1、静态数据"><a href="#1-1、静态数据" class="headerlink" title="1.1、静态数据"></a>1.1、静态数据</h6><p>静态数据是指一些永久性的数据，一般存储在硬盘中.计算机关闭之后再开启，这些数据依旧还在，只要你不主动删掉或者硬盘没坏，这些数据永远都在</p><h6 id="1-2、动态数据"><a href="#1-2、动态数据" class="headerlink" title="1.2、动态数据"></a>1.2、动态数据</h6><p>动态数据指在程序运行过程中，动态产生的临时数据，一般存储在内存中,计算机关闭之后，这些临时数据就会被清除</p><h5 id="2、两者之间的关系"><a href="#2、两者之间的关系" class="headerlink" title="2、两者之间的关系"></a>2、两者之间的关系</h5><p>可以互相转换</p><h5 id="3、数据的大小"><a href="#3、数据的大小" class="headerlink" title="3、数据的大小"></a>3、数据的大小</h5><p>1 KB = 1024 B，1 MB = 1024 KB，1 GB = 1024 MB，1 TB = 1024 GB</p><h4 id="五、常量与变量"><a href="#五、常量与变量" class="headerlink" title="五、常量与变量"></a>五、常量与变量</h4><p>在程序运行过程中，常量与变量是相对的。</p><h5 id="1、常量"><a href="#1、常量" class="headerlink" title="1、常量"></a>1、常量</h5><p>程序运行过程中，常量是指固定不变数据</p><h5 id="2、变量"><a href="#2、变量" class="headerlink" title="2、变量"></a>2、变量</h5><p>程序运行过程中，一个数据的值需要经常改变或者不确定时，就应该用变量来表示</p><h5 id="3、变量操作"><a href="#3、变量操作" class="headerlink" title="3、变量操作"></a>3、变量操作</h5><p>任何变量在使用之前，必须先进行定义</p><h6 id="3-1、定义变量目的"><a href="#3-1、定义变量目的" class="headerlink" title="3.1、定义变量目的"></a>3.1、定义变量目的</h6><p>在内存中分配一块存储空间给变量，方便以后存储数据</p><h6 id="3-2、定义变量格式"><a href="#3-2、定义变量格式" class="headerlink" title="3.2、定义变量格式"></a>3.2、定义变量格式</h6><p>变量类型  变量名</p><ul><li>变量名应满足标识符的要求</li><li>变量类型则是告诉编译器需要多少内存空间</li></ul><h6 id="3-3、变量使用"><a href="#3-3、变量使用" class="headerlink" title="3.3、变量使用"></a>3.3、变量使用</h6><ul><li>变量赋值: 往变量里面存点东西</li><li>变量运算: 由变量类型决定</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>程序常见错误</title>
       <link href="/2018/10/03/%E7%A8%8B%E5%BA%8F%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/"/>
       <url>/2018/10/03/%E7%A8%8B%E5%BA%8F%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</url>
@@ -75,7 +109,7 @@
       <link href="/2018/10/01/Iamasb/"/>
       <url>/2018/10/01/Iamasb/</url>
       
-        <content type="html"><![CDATA[<p>Iamasb 是 I‘m a scripboy(我是脚本小子)的缩写.当然,可以认为自己是个’sb’.^_^<br><a id="more"></a>以前，有人说，脚本小子是网站渗透中来形容一群熟悉工具，但不知道工具背后的运作原理的”菜鸟”.<br>但这个词对我而言，是因为自己从事web开发。本质上是个”拍黄片”的(phper),而php也被人认为是一门脚本语言.因此,也就这么认为自己了.</p><blockquote><p>“你把时间花在什么样的地方,决定了你成为什么样的人.”</p></blockquote><p>喜欢这句话.因此弄了这个站点.</p>]]></content>
+        <content type="html"><![CDATA[<p>Iamasb 是 I‘m a scripboy(我是脚本小子)的缩写.当然,可以认为自己是个’sb’.^_^<br><a id="more"></a><br>自己从事web领域，主要开发语言php。因此称呼自己为脚本小子，也是自然不过了。</p><hr><p>毕业后，供职的公司都是游戏行业领域。目前，在一家专注手游研发与发行的公司，担任游戏中心部门负责人.</p>]]></content>
       
       
       

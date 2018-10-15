@@ -5,24 +5,20 @@
   
 
   
-  <title>程序常见错误 | Iamasb</title>
+  <title>变量内存分析 | Iamasb</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、程序常见错误1、文件后缀名">
+  <meta name="description" content="1、什么是内存之前文章有提到，动态数据。动态数据需要存储介质进行存放。这个介质就叫内存。">
 <meta name="keywords" content="C语言">
 <meta property="og:type" content="article">
-<meta property="og:title" content="程序常见错误">
-<meta property="og:url" content="http://www.iamasb.com/2018/10/03/程序常见错误/index.html">
+<meta property="og:title" content="变量内存分析">
+<meta property="og:url" content="http://www.iamasb.com/2018/10/04/变量内存分析/index.html">
 <meta property="og:site_name" content="Iamasb">
-<meta property="og:description" content="一、程序常见错误1、文件后缀名">
+<meta property="og:description" content="1、什么是内存之前文章有提到，动态数据。动态数据需要存储介质进行存放。这个介质就叫内存。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.iamasb.com/img/3/1.png">
-<meta property="og:image" content="http://www.iamasb.com/img/3/2.png">
-<meta property="og:image" content="http://www.iamasb.com/img/3/3.png">
-<meta property="og:updated_time" content="2018-10-14T15:10:30.480Z">
+<meta property="og:updated_time" content="2018-10-15T15:21:14.543Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="程序常见错误">
-<meta name="twitter:description" content="一、程序常见错误1、文件后缀名">
-<meta name="twitter:image" content="http://www.iamasb.com/img/3/1.png">
+<meta name="twitter:title" content="变量内存分析">
+<meta name="twitter:description" content="1、什么是内存之前文章有提到，动态数据。动态数据需要存储介质进行存放。这个介质就叫内存。">
   
   
     <link rel="icon" href="/favicon.png">
@@ -69,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-程序常见错误" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-变量内存分析" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/03/程序常见错误/" class="article-date">
-  <time datetime="2018-10-03T15:05:47.000Z" itemprop="datePublished">2018-10-03</time>
+    <a href="/2018/10/04/变量内存分析/" class="article-date">
+  <time datetime="2018-10-04T15:12:34.000Z" itemprop="datePublished">2018-10-04</time>
 </a>
     
   </div>
@@ -83,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      程序常见错误
+      变量内存分析
     </h1>
   
 
@@ -91,32 +87,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="一、程序常见错误"><a href="#一、程序常见错误" class="headerlink" title="一、程序常见错误"></a>一、程序常见错误</h4><h5 id="1、文件后缀名"><a href="#1、文件后缀名" class="headerlink" title="1、文件后缀名"></a>1、文件后缀名<a id="more"></a></h5><ul>
-<li>把上一节的hello.c，换成hello.txt</li>
-<li>编译操作<br><img src="/img/3/1.png" alt="编译操作"><blockquote>
-<p>总结:  也就是说，编译器只能编译.c后缀的文件名</p>
-</blockquote>
-</li>
-</ul>
-<h5 id="2、无main函数"><a href="#2、无main函数" class="headerlink" title="2、无main函数"></a>2、无main函数</h5><ul>
-<li>把上一节的hello.c中的main换成其它名称</li>
-<li>编译操作<br><img src="/img/3/2.png" alt="编译操作"><blockquote>
-<p>总结:  编译通过，但无法进行链接</p>
-</blockquote>
-</li>
-</ul>
-<h5 id="3、无包含内置类库"><a href="#3、无包含内置类库" class="headerlink" title="3、无包含内置类库"></a>3、无包含内置类库</h5><ul>
-<li>把上一节的hello.c中的”#include&lt;stdio.h&gt;”去掉</li>
-<li>编译操作<br><img src="/img/3/3.png" alt="编译操作"><blockquote>
-<p>总结:  也就是说，去掉时，则无法识别printf函数</p>
-</blockquote>
-</li>
+        <h5 id="1、什么是内存"><a href="#1、什么是内存" class="headerlink" title="1、什么是内存"></a>1、什么是内存</h5><p>之前文章有提到，动态数据。动态数据需要存储介质进行存放。这个介质就叫内存。<a id="more"></a></p>
+<h5 id="2、内存存在的目的"><a href="#2、内存存在的目的" class="headerlink" title="2、内存存在的目的"></a>2、内存存在的目的</h5><p>缓冲地带，解决了静态数据(硬盘中)与CPU的交互速度。<br>!(交互)[/img/img/4/1.png]</p>
+<h5 id="3、内存地址"><a href="#3、内存地址" class="headerlink" title="3、内存地址"></a>3、内存地址</h5><p>内存地址是一个编号，代表一个内存空间。而在计算机中存储器的容量是以字节为基本单位的。也就是说一个内存地址代表一个字节（8bit）的存储空间。</p>
+<h5 id="4、理解内存地址"><a href="#4、理解内存地址" class="headerlink" title="4、理解内存地址"></a>4、理解内存地址</h5><h6 id="4-1、测试源代码scanf-c"><a href="#4-1、测试源代码scanf-c" class="headerlink" title="4.1、测试源代码scanf.c"></a>4.1、测试源代码scanf.c</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">	// 声明变量a为整形类型</span><br><span class="line">	int a;</span><br><span class="line">	// 等待输入整形数据，并把值赋给变量a</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;a);</span><br><span class="line">	// 打印变量a的内容</span><br><span class="line">	printf(&quot;%d&quot;,a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="4-2、运行结果"><a href="#4-2、运行结果" class="headerlink" title="4.2、运行结果"></a>4.2、运行结果</h6><p>!(交互)[/img/img/4/2.png]</p>
+<h6 id="4-3、执行流程"><a href="#4-3、执行流程" class="headerlink" title="4.3、执行流程"></a>4.3、执行流程</h6><p>!(交互)[/img/img/4/3.png]</p>
+<h6 id="4-4、内存分布"><a href="#4-4、内存分布" class="headerlink" title="4.4、内存分布"></a>4.4、内存分布</h6><p>!(交互)[/img/img/4/4.png]</p>
+<h6 id="4-5、描述"><a href="#4-5、描述" class="headerlink" title="4.5、描述"></a>4.5、描述</h6><ul>
+<li>变量等标识符说白了是便于程序员阅读，而计算机是无法识别的。因此最终变量还是得转换为内存地址才能被计算机所运行</li>
+<li>而变量能转换为具体的内存地址，则依靠”符号表”作为映射，才能正常工作</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/03/程序常见错误/" data-id="cjnag1qvp0005wrh64msvyp06" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/04/变量内存分析/" data-id="cjnag1qvn0003wrh6w7uy96ut" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
@@ -127,19 +113,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/10/04/常见术语/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          常见术语
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/10/02/第一个C语言程序/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/10/04/常见术语/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">第一个C语言程序</div>
+      <div class="article-nav-title">常见术语</div>
     </a>
   
 </nav>
