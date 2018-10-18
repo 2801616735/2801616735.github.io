@@ -88,214 +88,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="1、概括表格"><a href="#1、概括表格" class="headerlink" title="1、概括表格"></a>1、概括表格</h5><table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>具体操作</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>算术运算符</td>
-<td>+    -      /     *      %       ++      –</td>
-</tr>
-<tr>
-<td>赋值运算符</td>
-<td>=</td>
-</tr>
-<tr>
-<td>关系运算符</td>
-<td>&gt;,&lt;,&gt;=,&lt;=,==,!=</td>
-</tr>
-<tr>
-<td>逻辑运算符</td>
-<td>&amp;&amp;,,!</td>
-</tr>
-<tr>
-<td>位运算符</td>
-<td>&amp;,</td>
-<td>,^,~,&gt;&gt;,&lt;&lt;,</td>
-</tr>
-<tr>
-<td>三目条件运算符</td>
-<td>?:</td>
-</tr>
-<tr>
-<td>扩展赋值运算符</td>
-<td>+=,-=,*=,/=</td>
-</tr>
-</tbody>
-</table>
-<h5 id="2、逻辑运算符"><a href="#2、逻辑运算符" class="headerlink" title="2、逻辑运算符"></a>2、逻辑运算符</h5><h6 id="2-1、逻辑与-amp-amp"><a href="#2-1、逻辑与-amp-amp" class="headerlink" title="2.1、逻辑与 &amp;&amp;"></a>2.1、逻辑与 &amp;&amp;</h6><table>
-<thead>
-<tr>
-<th>A</th>
-<th>&amp;&amp;</th>
-<th>B</th>
-<th>result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>true</td>
-<td>&amp;&amp;</td>
-<td>false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>true</td>
-<td>&amp;&amp;</td>
-<td>true</td>
-<td>true</td>
-</tr>
-<tr>
-<td>flase</td>
-<td>&amp;&amp;</td>
-<td>false</td>
-<td>flase</td>
-</tr>
-<tr>
-<td>flase</td>
-<td>&amp;&amp;</td>
-<td>true</td>
-<td>true</td>
-</tr>
-</tbody>
-</table>
-<h6 id="2-2、逻辑或"><a href="#2-2、逻辑或" class="headerlink" title="2.2、逻辑或||"></a>2.2、逻辑或||</h6><table>
-<thead>
-<tr>
-<th>A</th>
-<th></th>
-<th>B result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>true</td>
-<td></td>
-<td>false true</td>
-</tr>
-<tr>
-<td>true</td>
-<td></td>
-<td>true true</td>
-</tr>
-<tr>
-<td>flase</td>
-<td></td>
-<td>false flase</td>
-</tr>
-<tr>
-<td>flase</td>
-<td></td>
-<td>true true</td>
-</tr>
-</tbody>
-</table>
-<h6 id="2-3、逻辑取反"><a href="#2-3、逻辑取反" class="headerlink" title="2.3、逻辑取反!"></a>2.3、逻辑取反!</h6><table>
-<thead>
-<tr>
-<th>A</th>
-<th>!</th>
-<th>result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>true</td>
-<td>!</td>
-<td>false</td>
-</tr>
-<tr>
-<td>flase</td>
-<td>!</td>
-<td>true</td>
-</tr>
-</tbody>
-</table>
-<h6 id="2-4、总结"><a href="#2-4、总结" class="headerlink" title="2.4、总结"></a>2.4、总结</h6><ul>
-<li>逻辑与中如有一个操作数为false，则结果必为false</li>
-<li>逻辑或中如有一个操作数为true，则结果必为true</li>
-<li>针对逻辑与和逻辑或可以采用短路方式。即从左往右计算，如果确定值则不会再计算下去</li>
-</ul>
-<h5 id="3、位运算"><a href="#3、位运算" class="headerlink" title="3、位运算"></a>3、位运算</h5><h6 id="3-1、符号汇总"><a href="#3-1、符号汇总" class="headerlink" title="3.1、符号汇总"></a>3.1、符号汇总</h6><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>含义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>~</td>
-<td>取反</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>按位或</td>
-<td></td>
-</tr>
-<tr>
-<td>&amp;</td>
-<td>按位与</td>
-<td></td>
-</tr>
-<tr>
-<td>^</td>
-<td>按位异或</td>
-<td></td>
-</tr>
-<tr>
-<td>&lt;&lt;</td>
-<td>左移</td>
-<td>左移一位则相当于乘2</td>
-</tr>
-<tr>
-<td>&gt;&gt;</td>
-<td>右移</td>
-<td>右移一位则相当于除2取商</td>
-</tr>
-</tbody>
-</table>
-<h6 id="3-2、按位或例子说明"><a href="#3-2、按位或例子说明" class="headerlink" title="3.2、按位或例子说明"></a>3.2、按位或例子说明</h6><p>|操作数 |按位或|<br>|2 |00000010|<br>|3 |00000011|<br>|结果 |3|</p>
-<h5 id="4、拓展运算"><a href="#4、拓展运算" class="headerlink" title="4、拓展运算"></a>4、拓展运算</h5><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>例子</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>++</td>
-<td>a++</td>
-<td>a自增一</td>
-</tr>
-<tr>
-<td>–</td>
-<td>a–</td>
-<td>a自减一</td>
-</tr>
-</tbody>
-</table>
-<h6 id="4-1、注意事项"><a href="#4-1、注意事项" class="headerlink" title="4.1、注意事项"></a>4.1、注意事项</h6><p>符号放在操作数前面还是后面有区别</p>
-<pre><code>* ++a 则代表a先自增1，再进行其它操作    
-* a++ 则代表a先进行其它操作，再自增1
-</code></pre><h5 id="5、三目运算符"><a href="#5、三目运算符" class="headerlink" title="5、三目运算符"></a>5、三目运算符</h5><h6 id="5-1、语法格式"><a href="#5-1、语法格式" class="headerlink" title="5.1、语法格式"></a>5.1、语法格式</h6><p>x?y:z;<br>其中x为boolean类型表达式，如果x为ture，则该表达式的结果为y，否则则为z</p>
-<h6 id="5-2、应用场景"><a href="#5-2、应用场景" class="headerlink" title="5.2、应用场景"></a>5.2、应用场景</h6><p>用于代替ifelse语句，简化代码，提高代码阅读性</p>
-<h5 id="6、运算符优先级"><a href="#6、运算符优先级" class="headerlink" title="6、运算符优先级"></a>6、运算符优先级</h5><p>表达式里面使用小括号</p>
-<h5 id="7、代码案例"><a href="#7、代码案例" class="headerlink" title="7、代码案例"></a>7、代码案例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int i,j;</span><br><span class="line">    // 1、赋值</span><br><span class="line">    i = 10;</span><br><span class="line">    j = 20;</span><br><span class="line">    // 2、算术运算</span><br><span class="line">    printf(&quot;i+j=%d\n&quot;,(i+j));</span><br><span class="line">    printf(&quot;i-j=%d\n&quot;,(i-j));</span><br><span class="line">    printf(&quot;i*j=%d\n&quot;,(i*j));</span><br><span class="line">    printf(&quot;j/i=%d\n&quot;,(j/i));</span><br><span class="line">    // 3、拓展运算</span><br><span class="line">    printf(&quot;i++=%d\n&quot;,i++);</span><br><span class="line">    printf(&quot;++i=%d\n&quot;,++i);</span><br><span class="line">    // 4、关系运算</span><br><span class="line">    if(j&gt;i)&#123;</span><br><span class="line">        printf(&quot;j&gt;i\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    // 5、逻辑运算</span><br><span class="line">    if( (j==20) &amp;&amp; (j&gt;i) )&#123;</span><br><span class="line">        printf(&quot;j=20 and j&gt;i\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h5 id="1、概括表格"><a href="#1、概括表格" class="headerlink" title="1、概括表格"></a>1、概括表格
+        
+          <p class="article-more-link">
+            <a href="/2018/10/06/8、运行符/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/06/8、运行符/" data-id="cjneozz99000ctuh6yjsn7g2s" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/06/8、运行符/" data-id="cjnepcf9s000dzzh67oozlumq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
@@ -338,7 +140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/05/7、数据类型/" data-id="cjneozz960009tuh69hk3mi5a" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/05/7、数据类型/" data-id="cjnepcf9q000azzh62u0snhq4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
@@ -381,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/04/6、变量内存分析/" data-id="cjneozz950008tuh6gthb6sxc" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/04/6、变量内存分析/" data-id="cjnepcf9o0008zzh6751vm3ag" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
@@ -424,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/04/5、常见术语/" data-id="cjneozz920005tuh6izs0u47q" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/04/5、常见术语/" data-id="cjnepcf9l0005zzh6y91szxin" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
@@ -467,7 +269,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/03/4、程序常见错误/" data-id="cjneozz900004tuh6hu7xqlnk" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/03/4、程序常见错误/" data-id="cjnepcf9k0004zzh6cfhvtwft" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
@@ -510,7 +312,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/02/3、第一个C语言程序/" data-id="cjneozz8r0003tuh63wymcgma" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/02/3、第一个C语言程序/" data-id="cjnepcf9f0001zzh6sax7k9yu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
@@ -553,7 +355,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/02/2、C语言简介/" data-id="cjneozz8m0001tuh6a563sukg" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/02/2、C语言简介/" data-id="cjnepcf9a0000zzh6obzleq71" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
@@ -598,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/02/1、计算机和软件常识/" data-id="cjneozz8i0000tuh6lxl8hran" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/02/1、计算机和软件常识/" data-id="cjnepcf9j0003zzh69ka6zftd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程常识/">编程常识</a></li></ul>
@@ -641,7 +443,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/01/Iamasb/" data-id="cjneozz9a000etuh65w8dnday" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/01/Iamasb/" data-id="cjnepcf9t000fzzh67ze9ezak" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人简介/">个人简介</a></li></ul>
