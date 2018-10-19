@@ -5,25 +5,23 @@
   
 
   
-  <title>6、变量内存分析 | Iamasb</title>
+  <title>11、函数运行案例 | Iamasb</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、什么是内存之前文章有提到，动态数据。动态数据需要存储介质进行存放。这个介质就叫内存。">
+  <meta name="description" content="一、代码案例1、源代码">
 <meta name="keywords" content="C语言">
 <meta property="og:type" content="article">
-<meta property="og:title" content="6、变量内存分析">
-<meta property="og:url" content="http://www.iamasb.com/2018/10/04/6、变量内存分析/index.html">
+<meta property="og:title" content="11、函数运行案例">
+<meta property="og:url" content="http://www.iamasb.com/2018/10/08/11、函数案例/index.html">
 <meta property="og:site_name" content="Iamasb">
-<meta property="og:description" content="1、什么是内存之前文章有提到，动态数据。动态数据需要存储介质进行存放。这个介质就叫内存。">
+<meta property="og:description" content="一、代码案例1、源代码">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.iamasb.com/img/4/1.png">
-<meta property="og:image" content="http://www.iamasb.com/img/4/2.png">
-<meta property="og:image" content="http://www.iamasb.com/img/4/3.png">
-<meta property="og:image" content="http://www.iamasb.com/img/4/4.png">
-<meta property="og:updated_time" content="2018-10-18T14:33:38.851Z">
+<meta property="og:image" content="http://www.iamasb.com/img/7/2.png">
+<meta property="og:image" content="http://www.iamasb.com/img/7/3.png">
+<meta property="og:updated_time" content="2018-10-19T15:05:05.973Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="6、变量内存分析">
-<meta name="twitter:description" content="1、什么是内存之前文章有提到，动态数据。动态数据需要存储介质进行存放。这个介质就叫内存。">
-<meta name="twitter:image" content="http://www.iamasb.com/img/4/1.png">
+<meta name="twitter:title" content="11、函数运行案例">
+<meta name="twitter:description" content="一、代码案例1、源代码">
+<meta name="twitter:image" content="http://www.iamasb.com/img/7/2.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -70,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-6、变量内存分析" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-11、函数案例" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/04/6、变量内存分析/" class="article-date">
-  <time datetime="2018-10-04T15:12:34.000Z" itemprop="datePublished">2018-10-04</time>
+    <a href="/2018/10/08/11、函数案例/" class="article-date">
+  <time datetime="2018-10-08T14:54:34.000Z" itemprop="datePublished">2018-10-08</time>
 </a>
     
   </div>
@@ -84,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      6、变量内存分析
+      11、函数运行案例
     </h1>
   
 
@@ -92,22 +90,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="1、什么是内存"><a href="#1、什么是内存" class="headerlink" title="1、什么是内存"></a>1、什么是内存</h5><p>之前文章有提到，动态数据。动态数据需要存储介质进行存放。这个介质就叫内存。<a id="more"></a></p>
-<h5 id="2、内存存在的目的"><a href="#2、内存存在的目的" class="headerlink" title="2、内存存在的目的"></a>2、内存存在的目的</h5><p>缓冲地带，解决了静态数据(硬盘中)与CPU的交互速度。<br><img src="/img/4/1.png" alt="交互"></p>
-<h5 id="3、内存地址"><a href="#3、内存地址" class="headerlink" title="3、内存地址"></a>3、内存地址</h5><p>内存地址是一个编号，代表一个内存空间。而在计算机中存储器的容量是以字节为基本单位的。也就是说一个内存地址代表一个字节（8bit）的存储空间。</p>
-<h5 id="4、理解内存地址"><a href="#4、理解内存地址" class="headerlink" title="4、理解内存地址"></a>4、理解内存地址</h5><h6 id="4-1、测试源代码scanf-c"><a href="#4-1、测试源代码scanf-c" class="headerlink" title="4.1、测试源代码scanf.c"></a>4.1、测试源代码scanf.c</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">	// 声明变量a为整形类型</span><br><span class="line">	int a;</span><br><span class="line">	// 等待输入整形数据，并把值赋给变量a</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;a);</span><br><span class="line">	// 打印变量a的内容</span><br><span class="line">	printf(&quot;%d&quot;,a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h6 id="4-2、运行结果"><a href="#4-2、运行结果" class="headerlink" title="4.2、运行结果"></a>4.2、运行结果</h6><p><img src="/img/4/2.png" alt="运行结果"></p>
-<h6 id="4-3、执行流程"><a href="#4-3、执行流程" class="headerlink" title="4.3、执行流程"></a>4.3、执行流程</h6><p><img src="/img/4/3.png" alt="执行流程"></p>
-<h6 id="4-4、内存分布"><a href="#4-4、内存分布" class="headerlink" title="4.4、内存分布"></a>4.4、内存分布</h6><p><img src="/img/4/4.png" alt="内存分布"></p>
-<h6 id="4-5、描述"><a href="#4-5、描述" class="headerlink" title="4.5、描述"></a>4.5、描述</h6><ul>
-<li>变量等标识符说白了是便于程序员阅读，而计算机是无法识别的。因此最终变量还是得转换为内存地址才能被计算机所运行</li>
-<li>而变量能转换为具体的内存地址，则依靠”符号表”作为映射，才能正常工作</li>
+        <h4 id="一、代码案例"><a href="#一、代码案例" class="headerlink" title="一、代码案例"></a>一、代码案例</h4><h5 id="1、源代码"><a href="#1、源代码" class="headerlink" title="1、源代码"></a>1、源代码</h5><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">// 1、函数声明</span><br><span class="line">// 无返回值</span><br><span class="line">void printString();</span><br><span class="line"></span><br><span class="line">// 返回两个整数的相加之和</span><br><span class="line">int sum(int a,int b);</span><br><span class="line"></span><br><span class="line">// 2、函数定义</span><br><span class="line">// 打印字符串</span><br><span class="line">void printString()</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;打印函数-&gt;printString()\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line">// 计算两个整数计算之和</span><br><span class="line">int sum(int a,int b)</span><br><span class="line">&#123;</span><br><span class="line">	int c ;</span><br><span class="line">	c = a + b;</span><br><span class="line">	return c;</span><br><span class="line">printf(&quot;todo&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 主函数</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	// 3、函数调用</span><br><span class="line">	// 打印字符串</span><br><span class="line">	printString();</span><br><span class="line"></span><br><span class="line">	// 计算10+20之和</span><br><span class="line">	int s;</span><br><span class="line">	s = sum(10,20);</span><br><span class="line">	printf(&quot;%d\n&quot;,s);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2、运行结果"><a href="#2、运行结果" class="headerlink" title="2、运行结果"></a>2、运行结果</h5><p><img src="/img/7/2.png" alt="运行结果"></p>
+<h4 id="二、运行分析"><a href="#二、运行分析" class="headerlink" title="二、运行分析"></a>二、运行分析</h4><h5 id="1、执行流程"><a href="#1、执行流程" class="headerlink" title="1、执行流程"></a>1、执行流程</h5><p><img src="/img/7/3.png" alt="运行结果"></p>
+<h5 id="2、总结"><a href="#2、总结" class="headerlink" title="2、总结"></a>2、总结</h5><ul>
+<li>函数定义时，最好先声明</li>
+<li>return语句后的命令不会执行</li>
+<li>函数被调用时，应先被声明定义</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/04/6、变量内存分析/" data-id="cjng5bvrk000nzoh68nhyoq4a" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/08/11、函数案例/" data-id="cjng5bvqr0001zoh62iyse7ux" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
@@ -118,19 +114,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/10/05/7、数据类型/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/10/09/12、函数常见错误/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          7、数据类型
+          12、函数常见错误
         
       </div>
     </a>
   
   
-    <a href="/2018/10/04/5、常见术语/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/10/08/10、函数/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">5、常见术语</div>
+      <div class="article-nav-title">10、函数</div>
     </a>
   
 </nav>
