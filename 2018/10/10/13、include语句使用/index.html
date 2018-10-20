@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>13、include语句使用 | Iamasb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、缘由从之前函数的内容，可以知道，函数是起到把代码进行封装，以提高可复用性的作用。">
+<meta name="keywords" content="C语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="13、include语句使用">
+<meta property="og:url" content="http://www.iamasb.com/2018/10/10/13、include语句使用/index.html">
+<meta property="og:site_name" content="Iamasb">
+<meta property="og:description" content="1、缘由从之前函数的内容，可以知道，函数是起到把代码进行封装，以提高可复用性的作用。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.iamasb.com/img/13/1.png">
+<meta property="og:image" content="http://www.iamasb.com/img/13/2.png">
+<meta property="og:image" content="http://www.iamasb.com/img/13/3.png">
+<meta property="og:image" content="http://www.iamasb.com/img/13/4.png">
+<meta property="og:updated_time" content="2018-10-20T08:20:35.574Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="13、include语句使用">
+<meta name="twitter:description" content="1、缘由从之前函数的内容，可以知道，函数是起到把代码进行封装，以提高可复用性的作用。">
+<meta name="twitter:image" content="http://www.iamasb.com/img/13/1.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Iamasb</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">你把时间花在什么样的地方,决定了你成为什么样的人.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <!--<nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.iamasb.com"></form>
+      </div>-->
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-13、include语句使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/10/13、include语句使用/" class="article-date">
+  <time datetime="2018-10-10T08:11:23.000Z" itemprop="datePublished">2018-10-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      13、include语句使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="1、缘由"><a href="#1、缘由" class="headerlink" title="1、缘由"></a>1、缘由</h5><p>从之前函数的内容，可以知道，函数是起到把代码进行封装，以提高可复用性的作用。<a id="more"></a>一个.c程序行数很长，这个时候我们或许可以采用函数，进行封装优化。但程序有很多个函数，并且行数很长的情况下，不可能把所有内容都编写进同一个文件吧。一来可阅读性差，二来多人开发不好维护。这个时候，就要采用include语句，如下图所示<br><img src="/img/13/1.png" alt="include"></p>
+<h5 id="2、include语句"><a href="#2、include语句" class="headerlink" title="2、include语句"></a>2、include语句</h5><p>include本质上所做的事情就是把其它文件的内容，包含进当前文件中</p>
+<h5 id="3、案例"><a href="#3、案例" class="headerlink" title="3、案例"></a>3、案例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;include&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>备注: 这里的include就是把stdio.h的文件内容拷贝到当前文件中</p>
+<h5 id="4、include语法"><a href="#4、include语法" class="headerlink" title="4、include语法"></a>4、include语法</h5><h6 id="4-1、源代码"><a href="#4-1、源代码" class="headerlink" title="4.1、源代码"></a>4.1、源代码</h6><p>源文件都处于同一个目录下</p>
+<table>
+<thead>
+<tr>
+<th>01.c</th>
+<th>01.h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#include&lt;stdio.h&gt;#include&lt;01.h&gt;int main(){    test();    return 0;}</td>
+<td>void test(){    printf(“01.h-&gt;test()\n”);}</td>
+</tr>
+</tbody>
+</table>
+<h6 id="4-2、编译结果"><a href="#4-2、编译结果" class="headerlink" title="4.2、编译结果"></a>4.2、编译结果</h6><p><img src="/img/13/2.png" alt="编译结果"><br>这里提示,无法找到此文件</p>
+<h6 id="4-3、解决"><a href="#4-3、解决" class="headerlink" title="4.3、解决"></a>4.3、解决</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;01.h&gt; 换成 #include&quot;01.h&quot;</span><br></pre></td></tr></table></figure>
+<h6 id="4-4、重新编译"><a href="#4-4、重新编译" class="headerlink" title="4.4、重新编译"></a>4.4、重新编译</h6><p><img src="/img/13/3.png" alt="编译结果"></p>
+<h5 id="5、include路径问题"><a href="#5、include路径问题" class="headerlink" title="5、include路径问题"></a>5、include路径问题</h5><h6 id="5-1、源代码"><a href="#5-1、源代码" class="headerlink" title="5.1、源代码"></a>5.1、源代码</h6><table>
+<thead>
+<tr>
+<th>01.c</th>
+<th>test/test.c</th>
+<th>01.h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#include&lt;stdio.h&gt;#include”01.h”#include”./test/test.c”int main(){    test();    echo();    return 0;}</td>
+<td>void echo(){    printf(“this echo()\n”);}</td>
+<td>void test(){    printf(“01.h-&gt;test()\n”);}</td>
+</tr>
+</tbody>
+</table>
+<h6 id="5-2、编译运行"><a href="#5-2、编译运行" class="headerlink" title="5.2、编译运行"></a>5.2、编译运行</h6><p><img src="/img/13/4.png" alt="编译结果"></p>
+<h5 id="6、总结"><a href="#6、总结" class="headerlink" title="6、总结"></a>6、总结</h5><ul>
+<li>include只是原封不动拷贝文件到包含处</li>
+<li>&lt;&gt;和””的区别,&lt;&gt;是包含系统自带文件,””则是包含用户自定义的</li>
+<li>后缀名.h是头文件</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.iamasb.com/2018/10/10/13、include语句使用/" data-id="cjnh67g7f0001gzh65gco4297" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/10/10/14、数组/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          14、数组
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/09/12、函数常见错误/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">12、函数常见错误</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">17</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/11/16、字符串/">16、字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/11/15、多维数组/">15、多维数组</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/10/14、数组/">14、数组</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/10/13、include语句使用/">13、include语句使用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/09/12、函数常见错误/">12、函数常见错误</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C语言/">C语言</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人简介/">个人简介</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程常识/">编程常识</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C语言/" style="font-size: 20px;">C语言</a> <a href="/tags/个人简介/" style="font-size: 10px;">个人简介</a> <a href="/tags/编程常识/" style="font-size: 10px;">编程常识</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">关于作者</h3>
+    <div class="widget">
+      <ul>
+      	<li>邮箱:2801616735@qq.com</li>
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 脚本小子
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<!--
+-->
+
+<div style="display:none;">
+<script src="https://s22.cnzz.com/z_stat.php?id=1275045943&web_id=1275045943" language="JavaScript"></script>
+</div>
+
+  </div>
+</body>
+</html>

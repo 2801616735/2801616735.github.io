@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>16、字符串 | Iamasb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、字符就是用’’单引号括起来的单个字符. 如 ‘a’">
+<meta name="keywords" content="C语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="16、字符串">
+<meta property="og:url" content="http://www.iamasb.com/2018/10/11/16、字符串/index.html">
+<meta property="og:site_name" content="Iamasb">
+<meta property="og:description" content="1、字符就是用’’单引号括起来的单个字符. 如 ‘a’">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.iamasb.com/img/16/1.png">
+<meta property="og:image" content="http://www.iamasb.com/img/16/2.png">
+<meta property="og:image" content="http://www.iamasb.com/img/16/3.png">
+<meta property="og:updated_time" content="2018-10-20T08:43:52.792Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="16、字符串">
+<meta name="twitter:description" content="1、字符就是用’’单引号括起来的单个字符. 如 ‘a’">
+<meta name="twitter:image" content="http://www.iamasb.com/img/16/1.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Iamasb</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">你把时间花在什么样的地方,决定了你成为什么样的人.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <!--<nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.iamasb.com"></form>
+      </div>-->
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-16、字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/11/16、字符串/" class="article-date">
+  <time datetime="2018-10-11T08:36:03.000Z" itemprop="datePublished">2018-10-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      16、字符串
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="1、字符"><a href="#1、字符" class="headerlink" title="1、字符"></a>1、字符</h5><p>就是用’’单引号括起来的单个字符. 如 ‘a’<a id="more"></a></p>
+<h5 id="2、字符串"><a href="#2、字符串" class="headerlink" title="2、字符串"></a>2、字符串</h5><p>就是用””双引号括起来的一个或多个字符. 如 “abc”</p>
+<h5 id="3、两者的区别"><a href="#3、两者的区别" class="headerlink" title="3、两者的区别"></a>3、两者的区别</h5><ul>
+<li>符号不同，字符使用单引号而字符串使用双引号</li>
+<li>从数组的角度，字符串是由至少一个字符所组成的一维数组</li>
+</ul>
+<h5 id="4、字符串初始化"><a href="#4、字符串初始化" class="headerlink" title="4、字符串初始化"></a>4、字符串初始化</h5><p>char 变量名[] = “字符内容”;</p>
+<h5 id="5、代码案例"><a href="#5、代码案例" class="headerlink" title="5、代码案例"></a>5、代码案例</h5><h6 id="5-1、源代码"><a href="#5-1、源代码" class="headerlink" title="5.1、源代码"></a>5.1、源代码</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">char s[] = &quot;xiaobei&quot;;</span><br><span class="line">printf(&quot;%s\n&quot;,s);</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="5-2、运行结果"><a href="#5-2、运行结果" class="headerlink" title="5.2、运行结果"></a>5.2、运行结果</h6><p><img src="/img/16/1.png" alt="运行结果"></p>
+<h5 id="6、字符串与数组的关系"><a href="#6、字符串与数组的关系" class="headerlink" title="6、字符串与数组的关系"></a>6、字符串与数组的关系</h5><h6 id="6-1、源代码"><a href="#6-1、源代码" class="headerlink" title="6.1、源代码"></a>6.1、源代码</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	char s[] = &quot;xiaobei&quot;;</span><br><span class="line">	printf(&quot;s=%p\n&quot;,s);</span><br><span class="line">	printf(&quot;&amp;s=%p\n&quot;,&amp;s);</span><br><span class="line">	printf(&quot;s[0]=%p\n&quot;,&amp;s[0]);</span><br><span class="line">	for (int i = 0; i &lt; 7; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;s[%d]=%c\taddress=%p\n&quot;,i,s[i],&amp;s[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="6-2、运行结果"><a href="#6-2、运行结果" class="headerlink" title="6.2、运行结果"></a>6.2、运行结果</h6><p><img src="/img/16/2.png" alt="运行结果"></p>
+<h6 id="6-3、总结"><a href="#6-3、总结" class="headerlink" title="6.3、总结"></a>6.3、总结</h6><p>从运行结果可以看出，字符串可以看做是一维数组</p>
+<h5 id="7、字符串结束符-0"><a href="#7、字符串结束符-0" class="headerlink" title="7、字符串结束符\0"></a>7、字符串结束符\0</h5><p>由上面的知识，可知字符串可以看成是一维数组，但是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char s[] = &quot;xiaobei&quot;;与char s[] = &#123;&apos;x&apos;,&apos;i&apos;,&apos;a&apos;,&apos;o&apos;,&apos;b&apos;,&apos;e&apos;,&apos;i&apos;&#125;;是不一样的</span><br></pre></td></tr></table></figure></p>
+<h6 id="7-1、代码"><a href="#7-1、代码" class="headerlink" title="7.1、代码"></a>7.1、代码</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	char s[] = &quot;xiaobei&quot;;</span><br><span class="line">	for (int i = 0; i &lt; 8; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		if( s[i] == &apos;\0&apos; )&#123;</span><br><span class="line">			printf(&quot;已经结束\n&quot;);</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			printf(&quot;s[%d]=%c\taddress=%p\n&quot;,i,s[i],&amp;s[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;==================================\n&quot;);</span><br><span class="line">	char s1[] = &#123;&apos;x&apos;,&apos;i&apos;,&apos;a&apos;,&apos;o&apos;,&apos;b&apos;,&apos;e&apos;,&apos;i&apos;&#125;;</span><br><span class="line">	for (int i = 0; i &lt; 8; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		if( s1[i] == &apos;\0&apos; )&#123;</span><br><span class="line">			printf(&quot;已经结束\n&quot;);</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			printf(&quot;s[%d]=%c\taddress=%p\n&quot;,i,s1[i],&amp;s1[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="7-2、运行结果"><a href="#7-2、运行结果" class="headerlink" title="7.2、运行结果"></a>7.2、运行结果</h6><p><img src="/img/16/3.png" alt="运行结果"></p>
+<h6 id="7-3、总结"><a href="#7-3、总结" class="headerlink" title="7.3、总结"></a>7.3、总结</h6><p>字符串是由\0为结束标志</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.iamasb.com/2018/10/11/16、字符串/" data-id="cjnh7588l0000w8h658pdf47n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/10/11/15、多维数组/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">15、多维数组</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">17</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/11/16、字符串/">16、字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/11/15、多维数组/">15、多维数组</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/10/14、数组/">14、数组</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/10/13、include语句使用/">13、include语句使用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/09/12、函数常见错误/">12、函数常见错误</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C语言/">C语言</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人简介/">个人简介</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程常识/">编程常识</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C语言/" style="font-size: 20px;">C语言</a> <a href="/tags/个人简介/" style="font-size: 10px;">个人简介</a> <a href="/tags/编程常识/" style="font-size: 10px;">编程常识</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">关于作者</h3>
+    <div class="widget">
+      <ul>
+      	<li>邮箱:2801616735@qq.com</li>
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 脚本小子
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<!--
+-->
+
+<div style="display:none;">
+<script src="https://s22.cnzz.com/z_stat.php?id=1275045943&web_id=1275045943" language="JavaScript"></script>
+</div>
+
+  </div>
+</body>
+</html>
