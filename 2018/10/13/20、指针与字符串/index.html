@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>20、指针与字符串 | Iamasb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、指针与字符串在之前字符串的章节中，提到字符串是由至少一个字符所组成的一维数组。而数组和指针之间又有密不可分的联系。从这个角度进行逻辑推断，字符串和指针应该也存在某些关系。">
+<meta name="keywords" content="C语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="20、指针与字符串">
+<meta property="og:url" content="http://www.iamasb.com/2018/10/13/20、指针与字符串/index.html">
+<meta property="og:site_name" content="Iamasb">
+<meta property="og:description" content="1、指针与字符串在之前字符串的章节中，提到字符串是由至少一个字符所组成的一维数组。而数组和指针之间又有密不可分的联系。从这个角度进行逻辑推断，字符串和指针应该也存在某些关系。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.iamasb.com/img/20/1.png">
+<meta property="og:image" content="http://www.iamasb.com/img/20/2.png">
+<meta property="og:image" content="http://www.iamasb.com/img/20/3.png">
+<meta property="og:image" content="http://www.iamasb.com/img/20/4.png">
+<meta property="og:updated_time" content="2018-10-21T14:15:58.053Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="20、指针与字符串">
+<meta name="twitter:description" content="1、指针与字符串在之前字符串的章节中，提到字符串是由至少一个字符所组成的一维数组。而数组和指针之间又有密不可分的联系。从这个角度进行逻辑推断，字符串和指针应该也存在某些关系。">
+<meta name="twitter:image" content="http://www.iamasb.com/img/20/1.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Iamasb</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">你把时间花在什么样的地方,决定了你成为什么样的人.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <!--<nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.iamasb.com"></form>
+      </div>-->
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-20、指针与字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/13/20、指针与字符串/" class="article-date">
+  <time datetime="2018-10-13T14:08:36.000Z" itemprop="datePublished">2018-10-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      20、指针与字符串
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="1、指针与字符串"><a href="#1、指针与字符串" class="headerlink" title="1、指针与字符串"></a>1、指针与字符串</h5><p>在之前字符串的章节中，提到字符串是由至少一个字符所组成的一维数组。而数组和指针之间又有密不可分的联系。从这个角度进行逻辑推断，字符串和指针应该也存在某些关系。<a id="more"></a></p>
+<h5 id="2、源码"><a href="#2、源码" class="headerlink" title="2、源码"></a>2、源码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	char s[] = &quot;hello&quot;;</span><br><span class="line">	char* ss = &quot;hello&quot;;</span><br><span class="line">	for (int i = 0; i &lt; 6; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		if( s[i] == &apos;\0&apos; )&#123;</span><br><span class="line">			printf(&quot;已结束\n&quot;);</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			printf(&quot;%c\n&quot;,s[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;====================================\n&quot;);</span><br><span class="line">	for (int i = 0; i &lt; 6; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		if( ss[i] == &apos;\0&apos; )&#123;</span><br><span class="line">			printf(&quot;已结束\n&quot;);</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			printf(&quot;%c\n&quot;,ss[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3、运行结果"><a href="#3、运行结果" class="headerlink" title="3、运行结果"></a>3、运行结果</h5><p><img src="/img/20/1.png" alt="运行结果"></p>
+<h5 id="4、字符串定义方式差异"><a href="#4、字符串定义方式差异" class="headerlink" title="4、字符串定义方式差异"></a>4、字符串定义方式差异</h5><h6 id="4-1、源码"><a href="#4-1、源码" class="headerlink" title="4.1、源码"></a>4.1、源码</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	char s[] = &quot;hello&quot;;</span><br><span class="line">	char* ss = &quot;hello&quot;;</span><br><span class="line">	s[0] = &apos;u&apos;;</span><br><span class="line">	ss[0] = &apos;x&apos;;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="4-2、运行结果"><a href="#4-2、运行结果" class="headerlink" title="4.2、运行结果"></a>4.2、运行结果</h6><p><img src="/img/20/2.png" alt="运行结果"></p>
+<h6 id="4-3、这里用gdb查看运行过程"><a href="#4-3、这里用gdb查看运行过程" class="headerlink" title="4.3、这里用gdb查看运行过程"></a>4.3、这里用gdb查看运行过程</h6><p><img src="/img/20/3.png" alt="运行结果"><br>也就是说，在修改变量ss中的首地址的内容时报错。</p>
+<h5 id="5、内存区域划分"><a href="#5、内存区域划分" class="headerlink" title="5、内存区域划分"></a>5、内存区域划分</h5><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>常量区</td>
+<td>存放一些常量字符串</td>
+</tr>
+<tr>
+<td>堆</td>
+<td>存放对象</td>
+</tr>
+<tr>
+<td>栈</td>
+<td>存放局部变量</td>
+</tr>
+</tbody>
+</table>
+<p>当我了解了 常量区这个概念。反过来就能够理解，char* ss = “hello”;其实就是把字符串”hello”，放在常量区。这样如果，有其它变量也需要时，则无需重新开辟，直接使用即可。因此它无法被修改.</p>
+<h5 id="6、总结"><a href="#6、总结" class="headerlink" title="6、总结"></a>6、总结</h5><ul>
+<li>定义字符串的几种方式<br>利用数组<br>char s[] = “hello”;<br>特点: 字符串里面的字符是可以被修改的</li>
+</ul>
+<p>利用指针<br>char *ss = “hello”;<br>特点: 字符串其实是一个常量字符串，里面的字符是不能被修改</p>
+<h5 id="7、指针字符串数组"><a href="#7、指针字符串数组" class="headerlink" title="7、指针字符串数组"></a>7、指针字符串数组</h5><h6 id="7-1、代码"><a href="#7-1、代码" class="headerlink" title="7.1、代码"></a>7.1、代码</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	// 普通的字符串数组</span><br><span class="line">	char s[2][10] = &#123;&quot;hello&quot;,&quot;world&quot;&#125;;</span><br><span class="line"></span><br><span class="line">	// 字符串指针数组</span><br><span class="line">	char* ss[2] = &#123;&quot;hello&quot;,&quot;world&quot;&#125;;</span><br><span class="line"></span><br><span class="line">	for (int i = 0; i &lt; 2; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;s[%d]=%s\n&quot;,i,s[i]);</span><br><span class="line">		printf(&quot;ss[%d]=%s\n&quot;,i,ss[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="7-2、运行结果"><a href="#7-2、运行结果" class="headerlink" title="7.2、运行结果"></a>7.2、运行结果</h6><p><img src="/img/20/4.png" alt="运行结果"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.iamasb.com/2018/10/13/20、指针与字符串/" data-id="cjniyto1k000l0ph63dvvlrcq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/10/14/21、返回指针的函数/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          21、返回指针的函数
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/13/19、指针与数组/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">19、指针与数组</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">23</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/14/22、指向函数的指针/">22、指向函数的指针</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/14/21、返回指针的函数/">21、返回指针的函数</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/13/20、指针与字符串/">20、指针与字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/13/19、指针与数组/">19、指针与数组</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/12/18、指向指针的指针/">18、指向指针的指针</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C语言/">C语言</a><span class="tag-list-count">21</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人简介/">个人简介</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程常识/">编程常识</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C语言/" style="font-size: 20px;">C语言</a> <a href="/tags/个人简介/" style="font-size: 10px;">个人简介</a> <a href="/tags/编程常识/" style="font-size: 10px;">编程常识</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">关于作者</h3>
+    <div class="widget">
+      <ul>
+      	<li>邮箱:2801616735@qq.com</li>
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 脚本小子
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<!--
+-->
+
+<div style="display:none;">
+<script src="https://s22.cnzz.com/z_stat.php?id=1275045943&web_id=1275045943" language="JavaScript"></script>
+</div>
+
+  </div>
+</body>
+</html>
