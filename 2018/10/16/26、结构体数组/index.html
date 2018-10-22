@@ -5,24 +5,22 @@
   
 
   
-  <title>4、程序常见错误 | Iamasb</title>
+  <title>26、结构体数组 | Iamasb</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、程序常见错误1、文件后缀名">
+  <meta name="description" content="1、结构体数组1.1、源码">
 <meta name="keywords" content="C语言">
 <meta property="og:type" content="article">
-<meta property="og:title" content="4、程序常见错误">
-<meta property="og:url" content="http://www.iamasb.com/2018/10/03/4、程序常见错误/index.html">
+<meta property="og:title" content="26、结构体数组">
+<meta property="og:url" content="http://www.iamasb.com/2018/10/16/26、结构体数组/index.html">
 <meta property="og:site_name" content="Iamasb">
-<meta property="og:description" content="一、程序常见错误1、文件后缀名">
+<meta property="og:description" content="1、结构体数组1.1、源码">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.iamasb.com/img/3/1.png">
-<meta property="og:image" content="http://www.iamasb.com/img/3/2.png">
-<meta property="og:image" content="http://www.iamasb.com/img/3/3.png">
-<meta property="og:updated_time" content="2018-10-18T14:33:25.109Z">
+<meta property="og:image" content="http://www.iamasb.com/img/25/4.png">
+<meta property="og:updated_time" content="2018-10-22T14:36:59.666Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="4、程序常见错误">
-<meta name="twitter:description" content="一、程序常见错误1、文件后缀名">
-<meta name="twitter:image" content="http://www.iamasb.com/img/3/1.png">
+<meta name="twitter:title" content="26、结构体数组">
+<meta name="twitter:description" content="1、结构体数组1.1、源码">
+<meta name="twitter:image" content="http://www.iamasb.com/img/25/4.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -69,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-4、程序常见错误" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-26、结构体数组" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/03/4、程序常见错误/" class="article-date">
-  <time datetime="2018-10-03T15:05:47.000Z" itemprop="datePublished">2018-10-03</time>
+    <a href="/2018/10/16/26、结构体数组/" class="article-date">
+  <time datetime="2018-10-16T14:35:05.000Z" itemprop="datePublished">2018-10-16</time>
 </a>
     
   </div>
@@ -83,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      4、程序常见错误
+      26、结构体数组
     </h1>
   
 
@@ -91,32 +89,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="一、程序常见错误"><a href="#一、程序常见错误" class="headerlink" title="一、程序常见错误"></a>一、程序常见错误</h4><h5 id="1、文件后缀名"><a href="#1、文件后缀名" class="headerlink" title="1、文件后缀名"></a>1、文件后缀名<a id="more"></a></h5><ul>
-<li>把上一节的hello.c，换成hello.txt</li>
-<li>编译操作<br><img src="/img/3/1.png" alt="编译操作"><blockquote>
-<p>总结:  也就是说，编译器只能编译.c后缀的文件名</p>
-</blockquote>
-</li>
-</ul>
-<h5 id="2、无main函数"><a href="#2、无main函数" class="headerlink" title="2、无main函数"></a>2、无main函数</h5><ul>
-<li>把上一节的hello.c中的main换成其它名称</li>
-<li>编译操作<br><img src="/img/3/2.png" alt="编译操作"><blockquote>
-<p>总结:  编译通过，但无法进行链接</p>
-</blockquote>
-</li>
-</ul>
-<h5 id="3、无包含内置类库"><a href="#3、无包含内置类库" class="headerlink" title="3、无包含内置类库"></a>3、无包含内置类库</h5><ul>
-<li>把上一节的hello.c中的”#include&lt;stdio.h&gt;”去掉</li>
-<li>编译操作<br><img src="/img/3/3.png" alt="编译操作"><blockquote>
-<p>总结:  也就是说，去掉时，则无法识别printf函数</p>
-</blockquote>
-</li>
-</ul>
+        <h5 id="1、结构体数组"><a href="#1、结构体数组" class="headerlink" title="1、结构体数组"></a>1、结构体数组</h5><h6 id="1-1、源码"><a href="#1-1、源码" class="headerlink" title="1.1、源码"></a>1.1、源码</h6><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	struct Person</span><br><span class="line">	&#123;</span><br><span class="line">		int age;</span><br><span class="line">		char* name;</span><br><span class="line">	&#125;;</span><br><span class="line">	struct Person p[3] = &#123;</span><br><span class="line">		&#123;.age=18,.name=&quot;xiaoming&quot;&#125;,</span><br><span class="line">		&#123;.age=17,.name=&quot;xiaohong&quot;&#125;,</span><br><span class="line">		&#123;.age=16,.name=&quot;xiaohua&quot;&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	printf(&quot;==================结构体内容=================\n&quot;);</span><br><span class="line">	for (int i = 0; i &lt; 3; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;p[%d].age=%d\tp[%d].name=%s\n&quot;,i,p[i].age,i,p[i].name );</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;==================结构体内存地址=================\n&quot;);</span><br><span class="line">	for (int i = 0; i &lt; 3; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;p[%d]=%p\n&quot;,i,&amp;p[i] );</span><br><span class="line">		printf(&quot;p[%d].age=%p\tp[%d].name=%p\n&quot;,i,&amp;p[i].age,i,&amp;p[i].name );</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="1-2、运行结果"><a href="#1-2、运行结果" class="headerlink" title="1.2、运行结果"></a>1.2、运行结果</h6><p><img src="/img/25/4.png" alt="运行结果"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/03/4、程序常见错误/" data-id="cjnke72tq000yuqh677lzp1l4" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/16/26、结构体数组/" data-id="cjnkekhzy001luqh6nnk9n3x8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
@@ -127,19 +107,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/10/04/5、常见术语/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          5、常见术语
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/10/02/3、第一个C语言程序/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/10/16/25、结构体注意事项/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">3、第一个C语言程序</div>
+      <div class="article-nav-title">25、结构体注意事项</div>
     </a>
   
 </nav>
