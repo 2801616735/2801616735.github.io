@@ -5,22 +5,22 @@
   
 
   
-  <title>22、指向函数的指针 | Iamasb</title>
+  <title>27、指向结构体的指针 | Iamasb</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、源代码">
+  <meta name="description" content="1、源码">
 <meta name="keywords" content="C语言">
 <meta property="og:type" content="article">
-<meta property="og:title" content="22、指向函数的指针">
-<meta property="og:url" content="http://www.iamasb.com/2018/10/14/22、指向函数的指针/index.html">
+<meta property="og:title" content="27、指向结构体的指针">
+<meta property="og:url" content="http://www.iamasb.com/2018/10/17/27、指向结构体的指针/index.html">
 <meta property="og:site_name" content="Iamasb">
-<meta property="og:description" content="1、源代码">
+<meta property="og:description" content="1、源码">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.iamasb.com/img/21/2.png">
-<meta property="og:updated_time" content="2018-10-21T14:27:44.810Z">
+<meta property="og:image" content="http://www.iamasb.com/img/26/1.png">
+<meta property="og:updated_time" content="2018-10-23T14:28:52.511Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="22、指向函数的指针">
-<meta name="twitter:description" content="1、源代码">
-<meta name="twitter:image" content="http://www.iamasb.com/img/21/2.png">
+<meta name="twitter:title" content="27、指向结构体的指针">
+<meta name="twitter:description" content="1、源码">
+<meta name="twitter:image" content="http://www.iamasb.com/img/26/1.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -67,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-22、指向函数的指针" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-27、指向结构体的指针" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/14/22、指向函数的指针/" class="article-date">
-  <time datetime="2018-10-14T14:17:25.000Z" itemprop="datePublished">2018-10-14</time>
+    <a href="/2018/10/17/27、指向结构体的指针/" class="article-date">
+  <time datetime="2018-10-17T14:25:21.000Z" itemprop="datePublished">2018-10-17</time>
 </a>
     
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      22、指向函数的指针
+      27、指向结构体的指针
     </h1>
   
 
@@ -89,18 +89,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="1、源代码"><a href="#1、源代码" class="headerlink" title="1、源代码"></a>1、源代码</h5><a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">void test()</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;指针指向test()函数\n&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	// (*p)是固定写法,代表指针变量p后续肯定是指向函数</span><br><span class="line">	// 左边void是指指针变量p指向的函数是没有返回值的</span><br><span class="line">	// 右边() 是指指针变量p指向的函数是没有形参的</span><br><span class="line">	void (*p)();</span><br><span class="line">// 指向test函数</span><br><span class="line">	p = test;</span><br><span class="line">       // 函数调用1</span><br><span class="line">	(*p)();</span><br><span class="line">       // 函数调用2</span><br><span class="line">	p();</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="2、运行结果"><a href="#2、运行结果" class="headerlink" title="2、运行结果"></a>2、运行结果</h5><p><img src="/img/21/2.png" alt="运行结果"></p>
-<h5 id="3、总结"><a href="#3、总结" class="headerlink" title="3、总结"></a>3、总结</h5><ul>
-<li>函数也是有内存空间地址</li>
-<li>函数名指向内存空间地址</li>
-</ul>
+        <h5 id="1、源码"><a href="#1、源码" class="headerlink" title="1、源码"></a>1、源码</h5><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	struct Person</span><br><span class="line">	&#123;</span><br><span class="line">		int age;</span><br><span class="line">		char* name;</span><br><span class="line">	&#125;;</span><br><span class="line">	struct Person p1 = &#123;.age=18,.name=&quot;xiaobei&quot;&#125;;</span><br><span class="line">	struct Person* p2;</span><br><span class="line">	p2 = &amp;p1;</span><br><span class="line">	printf(&quot;p1.age=%d\tp1.name=%s\n&quot;,p1.age,p1.name);</span><br><span class="line">	printf(&quot;p2.age=%d\tp2.name=%s\n&quot;,(*p2).age,(*p2).name);</span><br><span class="line">	printf(&quot;p2-&gt;age=%d\tp2-&gt;name=%s\n&quot;,p2-&gt;age,p2-&gt;name);</span><br><span class="line">	p1.name = &quot;xiaoming&quot;;</span><br><span class="line">	printf(&quot;p1.age=%d\tp1.name=%s\n&quot;,p1.age,p1.name);</span><br><span class="line">	printf(&quot;p2.age=%d\tp2.name=%s\n&quot;,p2-&gt;age,p2-&gt;name);</span><br><span class="line">	printf(&quot;====================结构体变量内存地址===================\n&quot;);</span><br><span class="line">	printf(&quot;p1=%p\n&quot;,&amp;p1);</span><br><span class="line">	printf(&quot;p1.age=%p\n&quot;,&amp;p1.age);</span><br><span class="line">	printf(&quot;p1.name=%p\n&quot;,&amp;p1.name);</span><br><span class="line"></span><br><span class="line">	printf(&quot;p2=%p\n&quot;,&amp;p2);</span><br><span class="line">	printf(&quot;p2.age=%p\n&quot;,&amp;p2-&gt;age);</span><br><span class="line">	printf(&quot;p2.name=%p\n&quot;,&amp;p2-&gt;name);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2、运行结果"><a href="#2、运行结果" class="headerlink" title="2、运行结果"></a>2、运行结果</h5><p><img src="/img/26/1.png" alt="运行结果"></p>
+<h5 id="3、总结"><a href="#3、总结" class="headerlink" title="3、总结"></a>3、总结</h5><p>直接使用结构体指针时，引用成员变量的操作由.改为-&gt;</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/14/22、指向函数的指针/" data-id="cjnltsgrm000y4hh68zyfer8q" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/17/27、指向结构体的指针/" data-id="cjnltsgrl000w4hh643zrenct" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
@@ -111,19 +108,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/10/15/23、变量作用域/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/10/17/28、结构体嵌套/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          23、变量作用域
+          28、结构体嵌套
         
       </div>
     </a>
   
   
-    <a href="/2018/10/14/21、返回指针的函数/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/10/16/26、结构体数组/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">21、返回指针的函数</div>
+      <div class="article-nav-title">26、结构体数组</div>
     </a>
   
 </nav>
