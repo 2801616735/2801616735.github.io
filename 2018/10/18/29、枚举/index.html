@@ -5,20 +5,22 @@
   
 
   
-  <title>Iamasb | Iamasb</title>
+  <title>29、枚举 | Iamasb</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Iamasb 是 I‘m a scripboy(我是脚本小子)的缩写.当然,可以认为自己是个’sb’.^_^">
-<meta name="keywords" content="个人简介">
+  <meta name="description" content="1、定义枚举类型123enum 枚举变量名&amp;#123;	值1,值2...&amp;#125;">
+<meta name="keywords" content="C语言">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Iamasb">
-<meta property="og:url" content="http://www.iamasb.com/2018/10/01/Iamasb/index.html">
+<meta property="og:title" content="29、枚举">
+<meta property="og:url" content="http://www.iamasb.com/2018/10/18/29、枚举/index.html">
 <meta property="og:site_name" content="Iamasb">
-<meta property="og:description" content="Iamasb 是 I‘m a scripboy(我是脚本小子)的缩写.当然,可以认为自己是个’sb’.^_^">
+<meta property="og:description" content="1、定义枚举类型123enum 枚举变量名&amp;#123;	值1,值2...&amp;#125;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-20T08:22:09.031Z">
+<meta property="og:image" content="http://www.iamasb.com/img/26/3.png">
+<meta property="og:updated_time" content="2018-10-24T14:48:22.548Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Iamasb">
-<meta name="twitter:description" content="Iamasb 是 I‘m a scripboy(我是脚本小子)的缩写.当然,可以认为自己是个’sb’.^_^">
+<meta name="twitter:title" content="29、枚举">
+<meta name="twitter:description" content="1、定义枚举类型123enum 枚举变量名&amp;#123;	值1,值2...&amp;#125;">
+<meta name="twitter:image" content="http://www.iamasb.com/img/26/3.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -65,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Iamasb" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-29、枚举" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/01/Iamasb/" class="article-date">
-  <time datetime="2018-10-01T15:36:15.000Z" itemprop="datePublished">2018-10-01</time>
+    <a href="/2018/10/18/29、枚举/" class="article-date">
+  <time datetime="2018-10-18T14:45:07.000Z" itemprop="datePublished">2018-10-18</time>
 </a>
     
   </div>
@@ -79,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Iamasb
+      29、枚举
     </h1>
   
 
@@ -87,17 +89,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Iamasb 是 I‘m a scripboy(我是脚本小子)的缩写.当然,可以认为自己是个’sb’.^_^<br><a id="more"></a><br>自己从事web领域，主要开发语言php。因此称呼自己为脚本小子，也是自然不过了。</p>
-<hr>
-<h5 id="建立博客初心"><a href="#建立博客初心" class="headerlink" title="建立博客初心"></a>建立博客初心</h5><p>趁年轻，用直白的话，记录下.用信息诠释价值.</p>
+        <h5 id="1、定义枚举类型"><a href="#1、定义枚举类型" class="headerlink" title="1、定义枚举类型"></a>1、定义枚举类型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">enum 枚举变量名&#123;</span><br><span class="line">	值1,值2...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h5 id="2、声明枚举变量"><a href="#2、声明枚举变量" class="headerlink" title="2、声明枚举变量"></a>2、声明枚举变量</h5><p>enum 枚举变量名 变量名</p>
+<h5 id="3、枚举作用"><a href="#3、枚举作用" class="headerlink" title="3、枚举作用"></a>3、枚举作用</h5><p>当一个变量的取值可固定时，比如性别这种。就可以采用枚举。但是由于c语言是弱类型。因此,当不遵守时，也不报错</p>
+<h5 id="4、代码"><a href="#4、代码" class="headerlink" title="4、代码"></a>4、代码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	enum Sessions&#123;</span><br><span class="line">		spring,</span><br><span class="line">		summer,</span><br><span class="line">		autumn,</span><br><span class="line">		winter</span><br><span class="line">	&#125;;</span><br><span class="line">	enum Sessions s = winter;</span><br><span class="line">	// 枚举的值从0开始</span><br><span class="line">	printf(&quot;%d\n&quot;,s);</span><br><span class="line"></span><br><span class="line">	// 不遵守枚举定义</span><br><span class="line">	enum Sessions s1 = &apos;a&apos;;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="5、运行结果"><a href="#5、运行结果" class="headerlink" title="5、运行结果"></a>5、运行结果</h5><p><img src="/img/26/3.png" alt="运行结果"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/01/Iamasb/" data-id="cjnna381e001o12h6yqf2ox2v" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/18/29、枚举/" data-id="cjnna3813001412h6klihq003" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人简介/">个人简介</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
 
     </footer>
   </div>
@@ -105,15 +110,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/10/02/1、计算机和软件常识/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/10/18/30、类型总结/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          1、计算机和软件常识
+          30、类型总结
         
       </div>
     </a>
   
+  
+    <a href="/2018/10/17/28、结构体嵌套/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">28、结构体嵌套</div>
+    </a>
   
 </nav>
 

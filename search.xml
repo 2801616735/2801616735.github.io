@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title>30、类型总结</title>
+      <link href="/2018/10/18/30%E3%80%81%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93/"/>
+      <url>/2018/10/18/30%E3%80%81%E7%B1%BB%E5%9E%8B%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<h5 id="1、基本数据类型"><a href="#1、基本数据类型" class="headerlink" title="1、基本数据类型"></a>1、基本数据类型</h5><a id="more"></a><h6 id="1-1、整形int"><a href="#1-1、整形int" class="headerlink" title="1.1、整形int"></a>1.1、整形int</h6><ul><li>long int、long: 8个字节 %ld</li><li>short int、short: 2个字节 %d %i</li><li>unsigned int unsigned: 4个字节 %zd</li><li>signed int: 4个字节 %d</li></ul><h6 id="1-2、浮点数float、double"><a href="#1-2、浮点数float、double" class="headerlink" title="1.2、浮点数float、double"></a>1.2、浮点数float、double</h6><ul><li>float: 4个字节  %f</li><li>double: 8个字节 %f</li></ul><h6 id="1-3、字符char"><a href="#1-3、字符char" class="headerlink" title="1.3、字符char"></a>1.3、字符char</h6><ul><li>char: 1个字节 %c<br>char类型保存在内存中的是其对应的ASCII值</li></ul><h5 id="2、构造类型"><a href="#2、构造类型" class="headerlink" title="2、构造类型"></a>2、构造类型</h5><h6 id="2-1、数组"><a href="#2-1、数组" class="headerlink" title="2.1、数组"></a>2.1、数组</h6><p>只能由同一种类型的数据组成<br>定义: 数据类型 数组名[元素个数]</p><h6 id="2-2、结构体"><a href="#2-2、结构体" class="headerlink" title="2.2、结构体"></a>2.2、结构体</h6><p>可以由不同类型的数据组成<br>先定义类型,再利用类型定义变量</p><h5 id="3、指针类型"><a href="#3、指针类型" class="headerlink" title="3、指针类型"></a>3、指针类型</h5><h6 id="3-1、指针变量定义"><a href="#3-1、指针变量定义" class="headerlink" title="3.1、指针变量定义"></a>3.1、指针变量定义</h6><p>int* p;</p><h6 id="3-2、间接操作变量的值"><a href="#3-2、间接操作变量的值" class="headerlink" title="3.2、间接操作变量的值"></a>3.2、间接操作变量的值</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a = 10;</span><br><span class="line">p = &amp;a;</span><br><span class="line">*p = 20;</span><br></pre></td></tr></table></figure><h5 id="4、枚举类型"><a href="#4、枚举类型" class="headerlink" title="4、枚举类型"></a>4、枚举类型</h5><p>使用场合:当一个变量的取值有固定取值时,可以使用</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>29、枚举</title>
+      <link href="/2018/10/18/29%E3%80%81%E6%9E%9A%E4%B8%BE/"/>
+      <url>/2018/10/18/29%E3%80%81%E6%9E%9A%E4%B8%BE/</url>
+      
+        <content type="html"><![CDATA[<h5 id="1、定义枚举类型"><a href="#1、定义枚举类型" class="headerlink" title="1、定义枚举类型"></a>1、定义枚举类型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">enum 枚举变量名&#123;</span><br><span class="line">值1,值2...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a><h5 id="2、声明枚举变量"><a href="#2、声明枚举变量" class="headerlink" title="2、声明枚举变量"></a>2、声明枚举变量</h5><p>enum 枚举变量名 变量名</p><h5 id="3、枚举作用"><a href="#3、枚举作用" class="headerlink" title="3、枚举作用"></a>3、枚举作用</h5><p>当一个变量的取值可固定时，比如性别这种。就可以采用枚举。但是由于c语言是弱类型。因此,当不遵守时，也不报错</p><h5 id="4、代码"><a href="#4、代码" class="headerlink" title="4、代码"></a>4、代码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">enum Sessions&#123;</span><br><span class="line">spring,</span><br><span class="line">summer,</span><br><span class="line">autumn,</span><br><span class="line">winter</span><br><span class="line">&#125;;</span><br><span class="line">enum Sessions s = winter;</span><br><span class="line">// 枚举的值从0开始</span><br><span class="line">printf(&quot;%d\n&quot;,s);</span><br><span class="line"></span><br><span class="line">// 不遵守枚举定义</span><br><span class="line">enum Sessions s1 = &apos;a&apos;;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="5、运行结果"><a href="#5、运行结果" class="headerlink" title="5、运行结果"></a>5、运行结果</h5><p><img src="/img/26/3.png" alt="运行结果"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>28、结构体嵌套</title>
       <link href="/2018/10/17/28%E3%80%81%E7%BB%93%E6%9E%84%E4%BD%93%E5%B5%8C%E5%A5%97/"/>
       <url>/2018/10/17/28%E3%80%81%E7%BB%93%E6%9E%84%E4%BD%93%E5%B5%8C%E5%A5%97/</url>

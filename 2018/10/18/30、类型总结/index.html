@@ -5,20 +5,20 @@
   
 
   
-  <title>Iamasb | Iamasb</title>
+  <title>30、类型总结 | Iamasb</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Iamasb 是 I‘m a scripboy(我是脚本小子)的缩写.当然,可以认为自己是个’sb’.^_^">
-<meta name="keywords" content="个人简介">
+  <meta name="description" content="1、基本数据类型">
+<meta name="keywords" content="C语言">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Iamasb">
-<meta property="og:url" content="http://www.iamasb.com/2018/10/01/Iamasb/index.html">
+<meta property="og:title" content="30、类型总结">
+<meta property="og:url" content="http://www.iamasb.com/2018/10/18/30、类型总结/index.html">
 <meta property="og:site_name" content="Iamasb">
-<meta property="og:description" content="Iamasb 是 I‘m a scripboy(我是脚本小子)的缩写.当然,可以认为自己是个’sb’.^_^">
+<meta property="og:description" content="1、基本数据类型">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-20T08:22:09.031Z">
+<meta property="og:updated_time" content="2018-10-24T14:52:38.367Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Iamasb">
-<meta name="twitter:description" content="Iamasb 是 I‘m a scripboy(我是脚本小子)的缩写.当然,可以认为自己是个’sb’.^_^">
+<meta name="twitter:title" content="30、类型总结">
+<meta name="twitter:description" content="1、基本数据类型">
   
   
     <link rel="icon" href="/favicon.png">
@@ -65,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Iamasb" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-30、类型总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/01/Iamasb/" class="article-date">
-  <time datetime="2018-10-01T15:36:15.000Z" itemprop="datePublished">2018-10-01</time>
+    <a href="/2018/10/18/30、类型总结/" class="article-date">
+  <time datetime="2018-10-18T14:45:26.000Z" itemprop="datePublished">2018-10-18</time>
 </a>
     
   </div>
@@ -79,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Iamasb
+      30、类型总结
     </h1>
   
 
@@ -87,17 +87,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Iamasb 是 I‘m a scripboy(我是脚本小子)的缩写.当然,可以认为自己是个’sb’.^_^<br><a id="more"></a><br>自己从事web领域，主要开发语言php。因此称呼自己为脚本小子，也是自然不过了。</p>
-<hr>
-<h5 id="建立博客初心"><a href="#建立博客初心" class="headerlink" title="建立博客初心"></a>建立博客初心</h5><p>趁年轻，用直白的话，记录下.用信息诠释价值.</p>
+        <h5 id="1、基本数据类型"><a href="#1、基本数据类型" class="headerlink" title="1、基本数据类型"></a>1、基本数据类型</h5><a id="more"></a>
+<h6 id="1-1、整形int"><a href="#1-1、整形int" class="headerlink" title="1.1、整形int"></a>1.1、整形int</h6><ul>
+<li>long int、long: 8个字节 %ld</li>
+<li>short int、short: 2个字节 %d %i</li>
+<li>unsigned int unsigned: 4个字节 %zd</li>
+<li>signed int: 4个字节 %d</li>
+</ul>
+<h6 id="1-2、浮点数float、double"><a href="#1-2、浮点数float、double" class="headerlink" title="1.2、浮点数float、double"></a>1.2、浮点数float、double</h6><ul>
+<li>float: 4个字节  %f</li>
+<li>double: 8个字节 %f</li>
+</ul>
+<h6 id="1-3、字符char"><a href="#1-3、字符char" class="headerlink" title="1.3、字符char"></a>1.3、字符char</h6><ul>
+<li>char: 1个字节 %c<br>char类型保存在内存中的是其对应的ASCII值</li>
+</ul>
+<h5 id="2、构造类型"><a href="#2、构造类型" class="headerlink" title="2、构造类型"></a>2、构造类型</h5><h6 id="2-1、数组"><a href="#2-1、数组" class="headerlink" title="2.1、数组"></a>2.1、数组</h6><p>只能由同一种类型的数据组成<br>定义: 数据类型 数组名[元素个数]</p>
+<h6 id="2-2、结构体"><a href="#2-2、结构体" class="headerlink" title="2.2、结构体"></a>2.2、结构体</h6><p>可以由不同类型的数据组成<br>先定义类型,再利用类型定义变量</p>
+<h5 id="3、指针类型"><a href="#3、指针类型" class="headerlink" title="3、指针类型"></a>3、指针类型</h5><h6 id="3-1、指针变量定义"><a href="#3-1、指针变量定义" class="headerlink" title="3.1、指针变量定义"></a>3.1、指针变量定义</h6><p>int* p;</p>
+<h6 id="3-2、间接操作变量的值"><a href="#3-2、间接操作变量的值" class="headerlink" title="3.2、间接操作变量的值"></a>3.2、间接操作变量的值</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a = 10;</span><br><span class="line">p = &amp;a;</span><br><span class="line">*p = 20;</span><br></pre></td></tr></table></figure>
+<h5 id="4、枚举类型"><a href="#4、枚举类型" class="headerlink" title="4、枚举类型"></a>4、枚举类型</h5><p>使用场合:当一个变量的取值有固定取值时,可以使用</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/01/Iamasb/" data-id="cjnna381e001o12h6yqf2ox2v" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/18/30、类型总结/" data-id="cjnna3815001812h6h1jwhrqk" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人简介/">个人简介</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
 
     </footer>
   </div>
@@ -105,15 +121,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/10/02/1、计算机和软件常识/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          1、计算机和软件常识
-        
-      </div>
-    </a>
   
+    <a href="/2018/10/18/29、枚举/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">29、枚举</div>
+    </a>
   
 </nav>
 
