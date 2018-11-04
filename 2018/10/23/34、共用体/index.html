@@ -5,20 +5,22 @@
   
 
   
-  <title>30、类型总结 | Iamasb-&gt;脚本小子博客</title>
+  <title>34、共用体 | Iamasb-&gt;脚本小子博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、基本数据类型">
+  <meta name="description" content="1、共用体共用体是一种特殊的数据类型，允许您在相同的内存位置存储不同的数据类型。">
 <meta name="keywords" content="C语言">
 <meta property="og:type" content="article">
-<meta property="og:title" content="30、类型总结">
-<meta property="og:url" content="http://www.iamasb.com/2018/10/18/30、类型总结/index.html">
+<meta property="og:title" content="34、共用体">
+<meta property="og:url" content="http://www.iamasb.com/2018/10/23/34、共用体/index.html">
 <meta property="og:site_name" content="Iamasb-&gt;脚本小子博客">
-<meta property="og:description" content="1、基本数据类型">
+<meta property="og:description" content="1、共用体共用体是一种特殊的数据类型，允许您在相同的内存位置存储不同的数据类型。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-24T14:52:38.367Z">
+<meta property="og:image" content="http://www.iamasb.com/img/33/3.png">
+<meta property="og:updated_time" content="2018-11-04T04:00:51.030Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="30、类型总结">
-<meta name="twitter:description" content="1、基本数据类型">
+<meta name="twitter:title" content="34、共用体">
+<meta name="twitter:description" content="1、共用体共用体是一种特殊的数据类型，允许您在相同的内存位置存储不同的数据类型。">
+<meta name="twitter:image" content="http://www.iamasb.com/img/33/3.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -65,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-30、类型总结" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-34、共用体" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/18/30、类型总结/" class="article-date">
-  <time datetime="2018-10-18T14:45:26.000Z" itemprop="datePublished">2018-10-18</time>
+    <a href="/2018/10/23/34、共用体/" class="article-date">
+  <time datetime="2018-10-23T03:55:46.000Z" itemprop="datePublished">2018-10-23</time>
 </a>
     
   </div>
@@ -79,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      30、类型总结
+      34、共用体
     </h1>
   
 
@@ -87,30 +89,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="1、基本数据类型"><a href="#1、基本数据类型" class="headerlink" title="1、基本数据类型"></a>1、基本数据类型</h5><a id="more"></a>
-<h6 id="1-1、整形int"><a href="#1-1、整形int" class="headerlink" title="1.1、整形int"></a>1.1、整形int</h6><ul>
-<li>long int、long: 8个字节 %ld</li>
-<li>short int、short: 2个字节 %d %i</li>
-<li>unsigned int unsigned: 4个字节 %zd</li>
-<li>signed int: 4个字节 %d</li>
-</ul>
-<h6 id="1-2、浮点数float、double"><a href="#1-2、浮点数float、double" class="headerlink" title="1.2、浮点数float、double"></a>1.2、浮点数float、double</h6><ul>
-<li>float: 4个字节  %f</li>
-<li>double: 8个字节 %f</li>
-</ul>
-<h6 id="1-3、字符char"><a href="#1-3、字符char" class="headerlink" title="1.3、字符char"></a>1.3、字符char</h6><ul>
-<li>char: 1个字节 %c<br>char类型保存在内存中的是其对应的ASCII值</li>
-</ul>
-<h5 id="2、构造类型"><a href="#2、构造类型" class="headerlink" title="2、构造类型"></a>2、构造类型</h5><h6 id="2-1、数组"><a href="#2-1、数组" class="headerlink" title="2.1、数组"></a>2.1、数组</h6><p>只能由同一种类型的数据组成<br>定义: 数据类型 数组名[元素个数]</p>
-<h6 id="2-2、结构体"><a href="#2-2、结构体" class="headerlink" title="2.2、结构体"></a>2.2、结构体</h6><p>可以由不同类型的数据组成<br>先定义类型,再利用类型定义变量</p>
-<h5 id="3、指针类型"><a href="#3、指针类型" class="headerlink" title="3、指针类型"></a>3、指针类型</h5><h6 id="3-1、指针变量定义"><a href="#3-1、指针变量定义" class="headerlink" title="3.1、指针变量定义"></a>3.1、指针变量定义</h6><p>int* p;</p>
-<h6 id="3-2、间接操作变量的值"><a href="#3-2、间接操作变量的值" class="headerlink" title="3.2、间接操作变量的值"></a>3.2、间接操作变量的值</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a = 10;</span><br><span class="line">p = &amp;a;</span><br><span class="line">*p = 20;</span><br></pre></td></tr></table></figure>
-<h5 id="4、枚举类型"><a href="#4、枚举类型" class="headerlink" title="4、枚举类型"></a>4、枚举类型</h5><p>使用场合:当一个变量的取值有固定取值时,可以使用</p>
+        <h5 id="1、共用体"><a href="#1、共用体" class="headerlink" title="1、共用体"></a>1、共用体</h5><p>共用体是一种特殊的数据类型，允许您在相同的内存位置存储不同的数据类型。<a id="more"></a>您可以定义一个带有多成员的共用体，但是任何时候只能有一个成员带有值。共用体提供了一种使用相同的内存位置的有效方式</p>
+<h6 id="1-1、定义格式"><a href="#1-1、定义格式" class="headerlink" title="1.1、定义格式"></a>1.1、定义格式</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">union 变量名&#123;</span><br><span class="line">	类型 变量名1;</span><br><span class="line">	类型 变量名2;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2、案例"><a href="#2、案例" class="headerlink" title="2、案例"></a>2、案例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	union Data&#123;</span><br><span class="line">		int i;</span><br><span class="line">		char* str;</span><br><span class="line">	&#125;;</span><br><span class="line">	union Data data = &#123;.i=1,.str=&quot;ddddddd&quot;&#125;;</span><br><span class="line">	printf(&quot;%d\n&quot;,data.i);</span><br><span class="line">	printf(&quot;%s\n&quot;,data.str);</span><br><span class="line">	union Data data1;</span><br><span class="line">	data1.i = 2;</span><br><span class="line">	printf(&quot;%d\n&quot;,data1.i);</span><br><span class="line">	data1.str = &quot;xiaobei&quot;;</span><br><span class="line">	printf(&quot;%s\n&quot;,data1.str);</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3、运行结果"><a href="#3、运行结果" class="headerlink" title="3、运行结果"></a>3、运行结果</h5><p><img src="/img/33/3.png" alt="运行结果"></p>
+<h5 id="4、运行结果分析"><a href="#4、运行结果分析" class="headerlink" title="4、运行结果分析"></a>4、运行结果分析</h5><p>之所以共用体data，成员变量i打印的数据有误，是用同一个时间内，内存地址内容有覆盖，导致</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.iamasb.com/2018/10/18/30、类型总结/" data-id="cjo2d80ww0018pbh6srlbr4f2" class="article-share-link">Share</a>
+      <a data-url="http://www.iamasb.com/2018/10/23/34、共用体/" data-id="cjo2d80x0001gpbh6p9c8857w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
@@ -121,19 +109,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/10/19/31、宏定义/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/10/24/35、static和extern对函数的作用/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          31、宏定义
+          35、static和extern对函数的作用
         
       </div>
     </a>
   
   
-    <a href="/2018/10/18/29、枚举/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/10/21/33、别名/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">29、枚举</div>
+      <div class="article-nav-title">33、别名</div>
     </a>
   
 </nav>
