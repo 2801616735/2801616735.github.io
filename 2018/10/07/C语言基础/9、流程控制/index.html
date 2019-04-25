@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>9、流程控制 | Iamasb-&gt;脚本小子博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、控制语句分类">
+<meta name="keywords" content="C语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="9、流程控制">
+<meta property="og:url" content="http://www.iamasb.com/2018/10/07/C语言基础/9、流程控制/index.html">
+<meta property="og:site_name" content="Iamasb-&gt;脚本小子博客">
+<meta property="og:description" content="1、控制语句分类">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.iamasb.com/img/6/1.png">
+<meta property="og:image" content="http://www.iamasb.com/img/6/2.png">
+<meta property="og:image" content="http://www.iamasb.com/img/6/3.png">
+<meta property="og:image" content="http://www.iamasb.com/img/6/4.png">
+<meta property="og:image" content="http://www.iamasb.com/img/6/5.png">
+<meta property="og:updated_time" content="2018-10-19T14:58:21.280Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="9、流程控制">
+<meta name="twitter:description" content="1、控制语句分类">
+<meta name="twitter:image" content="http://www.iamasb.com/img/6/1.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Iamasb</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">我不能保证你们每个人都能活下来,但世界需要你们.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <!--<nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.iamasb.com"></form>
+      </div>-->
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-C语言基础/9、流程控制" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/07/C语言基础/9、流程控制/" class="article-date">
+  <time datetime="2018-10-07T14:42:53.000Z" itemprop="datePublished">2018-10-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      9、流程控制
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="1、控制语句分类"><a href="#1、控制语句分类" class="headerlink" title="1、控制语句分类"></a>1、控制语句分类</h5><a id="more"></a>
+<table>
+<thead>
+<tr>
+<th>语句类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>顺序语句</td>
+<td>程序从上往下执行</td>
+</tr>
+<tr>
+<td>选择语句</td>
+<td>程序执行过程中根据内容选择不同的分支继续</td>
+</tr>
+<tr>
+<td>循环语句</td>
+<td>程序执行过程中需要重复执行某段语句</td>
+</tr>
+<tr>
+<td>中断语句</td>
+<td>改变控制语句执行流程</td>
+</tr>
+</tbody>
+</table>
+<h5 id="2、选择语句1"><a href="#2、选择语句1" class="headerlink" title="2、选择语句1"></a>2、选择语句1</h5><h6 id="2-1、单支语句"><a href="#2-1、单支语句" class="headerlink" title="2.1、单支语句"></a>2.1、单支语句</h6><p><img src="/img/6/1.png" alt="数据类型"></p>
+<h6 id="2-2、双支语句"><a href="#2-2、双支语句" class="headerlink" title="2.2、双支语句"></a>2.2、双支语句</h6><p><img src="/img/6/2.png" alt="数据类型"></p>
+<h6 id="2-3、多支语句"><a href="#2-3、多支语句" class="headerlink" title="2.3、多支语句"></a>2.3、多支语句</h6><p>由单支和双支语句组成</p>
+<h6 id="2-4、代码案例"><a href="#2-4、代码案例" class="headerlink" title="2.4、代码案例"></a>2.4、代码案例</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int a=1,b=2;</span><br><span class="line">    // 1、if语句</span><br><span class="line">    if(a&gt;0)&#123;</span><br><span class="line">        printf(&quot;a&gt;0\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    // 2、if-else语句</span><br><span class="line">    if(a&gt;b)&#123;</span><br><span class="line">        printf(&quot;a&gt;b\n&quot;);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        printf(&quot;a&lt;=b\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    // 3、多个if或if-else</span><br><span class="line">    if(a&gt;b)&#123;</span><br><span class="line">        printf(&quot;a&gt;b\n&quot;);</span><br><span class="line">    &#125;else if(a==b)&#123;</span><br><span class="line">        printf(&quot;a=b\n&quot;);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        printf(&quot;a&lt;b\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3、选择语句2"><a href="#3、选择语句2" class="headerlink" title="3、选择语句2"></a>3、选择语句2</h5><h6 id="3-1、switch"><a href="#3-1、switch" class="headerlink" title="3.1、switch"></a>3.1、switch</h6><p>当选择判断出现一些固定值判断时，则可以使用switch</p>
+<h6 id="3-2、switch格式"><a href="#3-2、switch格式" class="headerlink" title="3.2、switch格式"></a>3.2、switch格式</h6><p><img src="/img/6/3.png" alt="数据类型"></p>
+<h6 id="3-3、代码案例"><a href="#3-3、代码案例" class="headerlink" title="3.3、代码案例"></a>3.3、代码案例</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int i=1;</span><br><span class="line">    switch (i) &#123;</span><br><span class="line">        case 1:</span><br><span class="line">            printf(&quot;i=1\n&quot;);</span><br><span class="line">            break;</span><br><span class="line">            </span><br><span class="line">        default:</span><br><span class="line">            printf(&quot;i\n&quot;);</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="3-4、注意事项"><a href="#3-4、注意事项" class="headerlink" title="3.4、注意事项"></a>3.4、注意事项</h6><ul>
+<li>case后面的语句如没有break，则会继续往下执行，直到遇到break语句，才跳出swtich</li>
+<li>switch后面建议有默认的default的处理</li>
+<li>switch后面的判断表达式，可以是int、string、枚举</li>
+</ul>
+<h5 id="4、循环语句"><a href="#4、循环语句" class="headerlink" title="4、循环语句"></a>4、循环语句</h5><h6 id="4-1、while语句or-for语句"><a href="#4-1、while语句or-for语句" class="headerlink" title="4.1、while语句or for语句"></a>4.1、while语句or for语句</h6><p><img src="/img/6/4.png" alt="数据类型"></p>
+<h6 id="4-2、dowhile语句"><a href="#4-2、dowhile语句" class="headerlink" title="4.2、dowhile语句"></a>4.2、dowhile语句</h6><p><img src="/img/6/5.png" alt="数据类型"></p>
+<h6 id="4-3、代码案例"><a href="#4-3、代码案例" class="headerlink" title="4.3、代码案例"></a>4.3、代码案例</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int i=5;</span><br><span class="line">    // 1、while</span><br><span class="line">    while (i&gt;0) &#123;</span><br><span class="line">        printf(&quot;%d\n&quot;,i);</span><br><span class="line">        i--;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // 2、do-while</span><br><span class="line">    int j=5;</span><br><span class="line">    do &#123;</span><br><span class="line">        printf(&quot;%d\n&quot;,j);</span><br><span class="line">        j--;</span><br><span class="line">    &#125; while (j&gt;0);</span><br><span class="line">    </span><br><span class="line">    // 3、for语句</span><br><span class="line">    int z=5;</span><br><span class="line">    for (int z1=1; z1&lt;=z; z1++) &#123;</span><br><span class="line">        printf(&quot;%d\n&quot;,z1);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="4-4、注意事项"><a href="#4-4、注意事项" class="headerlink" title="4.4、注意事项"></a>4.4、注意事项</h6><ul>
+<li>编写循环语句必须要确定退出循环的条件，否则循环语句会一直执行</li>
+<li>while和dowhile的区别是循环体是否先执行</li>
+<li>for和while的本质是一样的，但for代码编写上比while更紧凑</li>
+</ul>
+<h5 id="5、中断语句"><a href="#5、中断语句" class="headerlink" title="5、中断语句"></a>5、中断语句</h5><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>用于强行退出循环，不执行循环剩余的语句。也可以用于switch语句</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>用在循环语句体中，用于终止某次循环过程，即跳过循环体中尚未执行的语句接着进行下一次是否执行循环的判断</td>
+</tr>
+</tbody>
+</table>
+<h6 id="5-1、代码"><a href="#5-1、代码" class="headerlink" title="5.1、代码"></a>5.1、代码</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int i=5;</span><br><span class="line">    while(i&gt;0)</span><br><span class="line">    &#123;</span><br><span class="line">        if(i==4)&#123;</span><br><span class="line">            printf(&quot;continue\n&quot;);</span><br><span class="line">            i--;</span><br><span class="line">            continue;</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;i=%d\n&quot;,i);</span><br><span class="line">        if(i==1)&#123;</span><br><span class="line">            printf(&quot;break\n&quot;);</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        i--;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.iamasb.com/2018/10/07/C语言基础/9、流程控制/" data-id="cjuwqjz19000juryeelgw2f7g" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/10/08/C语言基础/10、函数/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          10、函数
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/06/C语言基础/8、运行符/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">8、运行符</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">37</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/25/深入理解Workerman/1、PHP如何处理网络请求/2、web通信流程/">2、web通信流程</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/25/深入理解Workerman/1、PHP如何处理网络请求/1、单机到联网的发展/">1、单机到联网的发展</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/25/深入理解Workerman/深入理解Workerman导图/">1、导图</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/25/C语言基础/36、static和extern对变量的作用/">36、static和extern对变量的作用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/24/C语言基础/35、static和extern对函数的作用/">35、static和extern对函数的作用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C语言/">C语言</a><span class="tag-list-count">35</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人简介/">个人简介</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深入理解Workerman/">深入理解Workerman</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程常识/">编程常识</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C语言/" style="font-size: 20px;">C语言</a> <a href="/tags/个人简介/" style="font-size: 10px;">个人简介</a> <a href="/tags/深入理解Workerman/" style="font-size: 15px;">深入理解Workerman</a> <a href="/tags/编程常识/" style="font-size: 10px;">编程常识</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">关于作者</h3>
+    <div class="widget">
+      <ul>
+      	<li>邮箱:2801616735@qq.com</li>
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 脚本小子
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<!--
+-->
+
+<div style="display:none;">
+<script src="https://s22.cnzz.com/z_stat.php?id=1275045943&web_id=1275045943" language="JavaScript"></script>
+</div>
+
+  </div>
+</body>
+</html>
